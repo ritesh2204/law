@@ -7,25 +7,28 @@ const Sidebar = () => (
       <div className="sidenav">
         <div>
           <p className="heading">Dashboard</p>
-          <p className="subhead">PATIENTS</p>
+          <p className="subhead">MENU</p>
           <a href="#about">
-            <Icon name="hand point right outline" />
-            Visits
+            <Icon name="user outline" />
+            Clients
           </a>
           <a href="#services">
-            <Icon name="hand point right outline" />
-            Patients
+            <Icon name="suitcase" />
+            Cases
           </a>
           <a href="#clients">
-            <Icon name="hand point right outline" />
-            Analytics
+            <Icon name="law" />
+            Advocates
           </a>
-
+          <a href="#clients">
+            <Icon name="user outline" />
+            Users
+          </a>
           <br />
-          <p className="subhead">MY PROFILE</p>
+          <p className="subhead">BILL AREA</p>
           <a href="#contact">
-            <Icon name="setting " />
-            Settings
+            <Icon name="money bill alternate" />
+            Bill
           </a>
         </div>
       </div>

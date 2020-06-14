@@ -7,7 +7,7 @@ body {
 .sidenav {
   height: 100vh;
   margin-top: 70px;
-  max-width: 230px;
+  width: 250px;
   z-index: 1;
   top: 50px;
   left: 0;
@@ -193,6 +193,13 @@ body {
   background: #f1f8f8;
 }
 
+.panel-table {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f1f8f8;
+}
 .panel-container {
   display: flex;
   justify-content: center;
@@ -213,4 +220,40 @@ body {
 
 .bl {
   border-left: 1px solid #e3e3e3;
+}
+
+.panel-head {
+  font-size: 14px;
+  color: "#2D6465";
+  font-weight: bold;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.text-center {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 85%;
+  margin: 0 auto;
+  border: 1px solid #cbf2f2;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.mx-auto {
+  margin: 0 auto;
 }
