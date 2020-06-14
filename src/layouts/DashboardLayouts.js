@@ -6,7 +6,6 @@ import Sidebar from "../components/Sidebar";
 const DashboardLayouts = ({ children }) => (
   <React.Fragment>
     <Navbar />
-
     <div style={{ display: "flex" }}>
       <div style={{ flexGrow: 1 }}>
         <Sidebar />
