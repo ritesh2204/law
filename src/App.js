@@ -7,9 +7,7 @@ export default function App() {
   return (
     <div className="App">
       <DashboardLayouts>
-        <div style={{ flex: 8 }}>
-          <DashboardPage />
-        </div>
+        <DashboardPage />
       </DashboardLayouts>
     </div>
   );
