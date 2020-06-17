@@ -1,29 +1,36 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Roboto", sans-serif !important; */
+}
+
+.align-items-center {
+  align-items: center;
 }
 
 .sidenav {
   height: 100vh;
-  margin-top: 70px;
-  width: 250px;
+
+  min-width: 250px;
   z-index: 1;
   top: 50px;
   left: 0;
   background-color: #fdfdfd;
   overflow-x: hidden;
-  padding-top: 20px;
+
   border-right: 1px solid #e3e3e3;
 }
 
 .sidenav a {
-  padding-top: 50px;
-  padding: 7px 30px;
   text-decoration: none;
-  font-size: 16px;
+  padding-left: 8px;
+  font-size: 1.1rem;
   color: #343436;
   display: block;
+}
+
+.sidenav li {
+  padding-bottom: 8px;
 }
 
 /* .sidebarmenu{
@@ -54,7 +61,6 @@ body {
   background-color: #fdfdfd;
   border-left: 1px solid #e3e3e3;
   overflow-x: hidden;
-  padding-top: 20px;
 }
 
 .right-sidenav a {
@@ -100,7 +106,7 @@ body {
 
 .ui.input > input {
   /* border-radius: 50px !important; */
-  border: none !important;
+  border: 1px solid #e3e3e3;
 }
 
 .ui.menu .item:before {
@@ -111,22 +117,35 @@ body {
   color: #717572;
 }
 
+li {
+  display: flex;
+
+  align-items: center;
+}
+
 .avatar {
   width: 50px;
 }
 .subhead {
   margin-left: 30px;
-  font-size: 12px;
+  font-size: 1rem;
   color: gray;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
+.gray {
+  color: gray;
+}
 .heading {
   color: #000;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 18px;
-  margin-left: 30px;
+  padding-left: 10px;
+}
+
+.lightgray {
+  color: #363844 !important;
 }
 
 .d-flex {
@@ -155,6 +174,7 @@ body {
   background: #fff;
   color: #000;
   padding: 20px;
+  min-width: 280px;
 }
 
 .mb-0 {
@@ -185,7 +205,7 @@ body {
   padding: 20px;
 }
 .panel {
-  width: 80%;
+  width: 96%;
   margin: 0 auto;
   padding: 10px;
   border-radius: 10px;
@@ -209,27 +229,45 @@ body {
   width: 50px;
 }
 
+.justify-content-center {
+  justify-content: center !important;
+  align-items: center;
+}
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
 }
 
+.img-30 {
+  width: 28px;
+}
 .p-10 {
   padding: 10px !important;
 }
 
 .bl {
-  border-left: 1px solid #e3e3e3;
+  border-left: 1px solid #2d6465;
 }
 
+.p-30 {
+  padding: 30px;
+}
 .panel-head {
   font-size: 14px;
   color: "#2D6465";
   font-weight: bold;
 }
 
+.space-around {
+  justify-content: space-around !important;
+}
 .space-evenly {
   justify-content: space-evenly;
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 .text-center {
@@ -239,9 +277,13 @@ body {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  border: 0;
   width: 85%;
   margin: 0 auto;
-  border: 1px solid #cbf2f2;
+  border: 1px solid #e9f8f8;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.22);
 }
 
 th,
@@ -251,9 +293,231 @@ td {
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #e9f8f8;
 }
 
 .mx-auto {
   margin: 0 auto;
+}
+
+.d-column {
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pb {
+  padding-bottom: 15px;
+}
+.img-50 {
+  width: 35px !important;
+}
+
+.green {
+  color: #186666;
+}
+
+.img-80 {
+  width: 50px;
+}
+.lightgreen {
+  color: #278789;
+  font-size: 20px;
+}
+.fs-14 {
+  font-size: 16px !important;
+}
+
+.bold-green {
+  color: #2d6465;
+  font-size: 16px;
+}
+
+.fontsize-20 {
+  font-size: 16px;
+}
+.fontsize-40 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+.mt-100 {
+  margin-top: 100px !important;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+
+.b-left {
+  border-left: 1px solid #278789;
+}
+
+.mr {
+  margin-left: 10px !important;
+}
+
+.text-gray {
+  color: #567071 !important;
+  font-size: 12px;
+}
+
+.w-100 {
+  width: 90% !important;
+}
+
+.mr-100 {
+  margin-top: 100px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.ml-40 {
+  margin-left: 60px !important;
+}
+.mt-100 {
+  margin-top: 100px;
+}
+
+.red {
+  color: red;
+}
+
+.ui.form .field > label {
+  color: #787979 !important;
+  font-weight: bold !important;
+
+  margin-top: 10px;
+}
+
+.ui.fluid.dropdown {
+  padding: 14px !important;
+}
+
+.letterspace {
+  letter-spacing: 1px;
+}
+
+.mb-2 {
+  margin-bottom: 8px !important;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+.mt-24 {
+  margin-top: 24px !important;
+}
+
+.bordermin {
+  border: 1px solid blue;
+  background: blue;
+  width: 5%;
+}
+
+@media (max-width: 1360px) {
+  .b-left {
+    visibility: hidden !important;
+  }
+}
+
+.greenbg {
+  background: #56bc7a !important;
+}
+
+.textwhite {
+  color: #fff !important;
+}
+
+.graybg {
+  background: #b3bac8 !important;
+}
+
+.ui.button {
+  color: #fff !important;
+}
+
+.ongoing {
+  width: 24px !important;
+  height: 91px !important;
+
+  background: #3cb371 !important;
+  border-radius: 10px !important;
+}
+.bg-lightgray {
+  width: 24px !important;
+  height: 91px !important;
+  text-align: center;
+  background: #b2b2b2 !important;
+  border-radius: 10px !important;
+}
+
+.ongoingtext {
+  color: #ffffff;
+  /* max-height: 250px; */
+  position: relative;
+  top: 52px;
+  transform: rotate(-90deg);
+  font-weight: bold;
+  margin-right: 2px;
+}
+
+.text-bold-gray {
+  color: #545454 !important;
+}
+.text-light-gray {
+  color: #6f6f6f !important;
+  font-size: 20px;
+}
+.profileborder {
+  border: 2px solid blue !important;
+  border-radius: 50px !important;
+  width: 5% !important;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 300 !important;
+}
+.bg-f6 {
+  background: #f6f6f6 !important;
+}
+.ui.primary.button,
+.ui.primary.buttons .button {
+  background-color: #2d6465 !important;
+}
+
+.g {
+  color: #6f6f6f !important;
+}
+
+.ui.form input:not([type]),
+.ui.form input[type="date"],
+.ui.form input[type="datetime-local"],
+.ui.form input[type="email"],
+.ui.form input[type="file"],
+.ui.form input[type="number"],
+.ui.form input[type="password"],
+.ui.form input[type="search"],
+.ui.form input[type="tel"],
+.ui.form input[type="text"],
+.ui.form input[type="time"],
+.ui.form input[type="url"] {
+  border: 0.15rem solid rgba(112, 116, 121, 0.15) !important;
+}
+
+.ui.form textarea {
+  border: 0.15rem solid rgba(112, 116, 121, 0.15) !important;
+}
+
+.ui.selection.dropdown {
+  border: 0.15rem solid rgba(112, 116, 121, 0.15) !important;
 }

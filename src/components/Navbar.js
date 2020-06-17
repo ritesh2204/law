@@ -3,7 +3,7 @@ import { Menu, Input, Icon, Image } from "semantic-ui-react";
 
 const Navbar = () => (
   <div>
-    <Menu fixed="top" className="navpadtop navpadbottom navshadow">
+    <Menu fixed="top" className=" navshadow">
       <Menu.Item style={navStyle.logo}>H-care</Menu.Item>
 
       <Input
@@ -43,13 +43,13 @@ const Navbar = () => (
 
 const navStyle = {
   logo: {
-    paddingLeft: 50,
+    paddingLeft: 32,
     fontWeight: "bold",
     fontSize: 16,
     marginRight: 150,
   },
   search: {
-    width: "60%",
+    width: "66.6%",
     borderRadius: "50px",
     color: "gray",
   },

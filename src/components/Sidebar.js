@@ -1,39 +1,59 @@
 import React from "react";
-import { Icon, Grid, GridColumn, Image, Container } from "semantic-ui-react";
+import { Icon } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => (
-  <div>
+  <div className="sidenav">
     <div>
-      <div className="sidenav">
-        <div>
-          <p className="heading">Dashboard</p>
-          <p className="subhead">MENU</p>
-          <a href="#about">
-            <Icon name="user outline" />
-            Clients
-          </a>
-          <a href="#services">
-            <Icon name="suitcase" />
-            Cases
-          </a>
-          <a href="#clients">
-            <Icon name="law" />
-            Advocates
-          </a>
-          <a href="#clients">
-            <Icon name="user outline" />
-            Users
-          </a>
-          <br />
-          <p className="subhead">BILL AREA</p>
-          <a href="#contact">
-            <Icon name="money bill alternate" />
-            Bill
-          </a>
-        </div>
-      </div>
+      <br />
+      <ul>
+        <li>
+          <h3 style={{ display: "flex" }}>
+            <img
+              src="/images/dash.png"
+              style={{ borderBottom: "2px solid blue", paddingBottom: 2 }}
+              alt="dahboardlogo"
+            />
+            <b className="ml-10">
+              <Link to="/">Dashboard</Link>
+            </b>
+          </h3>
+        </li>
+      </ul>
+
+      <ul style={{ listStyle: "none" }}>
+        <h4> MENU</h4>
+        <li>
+          <Icon name="user outline" color="gray" />
+          <Link to="/clients">Clients</Link>
+        </li>
+        <li>
+          <Icon name="suitcase" color="gray" />
+          <Link to="/viewcase">Cases</Link>
+        </li>
+        <li>
+          <Icon name="law" color="gray" />
+          <Link to="/advocates">Advocates</Link>
+        </li>
+      </ul>
+
+      <ul>
+        <h4>BILL AREA</h4>
+        <li>
+          <Icon name="money bill alternate" color="gray" />
+          <Link to="/">Bill</Link>
+        </li>
+      </ul>
+
+      <ul>
+        <h4>LOGOUT AREA</h4>
+
+        <li>
+          <Icon name="power" color="gray" />
+          <Link to="/">Log out</Link>
+        </li>
+      </ul>
     </div>
-    <div></div>
   </div>
 );
 
