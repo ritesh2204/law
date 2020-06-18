@@ -6,14 +6,29 @@ const CaseDiaryListItem = () => {
     <div style={styles.panelMargin}>
       <div className="panel flex-container ">
         <div className="panel-head d-column " style={styles.iconCenter}>
-          <Image src="/images/court.png" circular className="img-50" />
-          <p className="mb-0 mt-10 bold-green ">High Court</p>
+          <Image src="/images/court.png" circular className="img-70" />
+          <p
+            className="mb-0 mt-0 bold-green"
+            style={{ fontSize: 18, fontWeight: 500 }}
+          >
+            High Court
+          </p>
         </div>
-        <div className="d-column " style={{ flex: 6 }}>
-          <h2 className="green ">Ashna Chandrakar</h2>
+        {/* <div className="d-column " style={{ flex: 6 }}>
+          <h2 className="green mb">Ashna Chandrakar</h2>
           <p className="lightgreen">
             rajat jain vs state of chhattisgarh bilaspur (281929)
           </p>
+        </div> */}
+        <div className="d-column mt-5 " style={{ flex: 6 }}>
+          <div className="mr">
+            <p className="lightgreen f-24 mb-0">
+              <b className="bold-green">Ashna Chandrakar</b>
+            </p>
+            <p className="mb-0 lightgreen f-24">
+              rajat jain vs state of chhattisgarh bilaspur (281929)
+            </p>
+          </div>
         </div>
         <div className="b-left"></div>
         <div className="d-column mt-5 " style={{ flex: 2 }}>
@@ -48,7 +63,7 @@ const CaseDiaryListItem = () => {
         </div>
 
         <div style={{ ...styles.pillDarkGreen, display: "flex" }}>
-          <div style={styles.lightGreenPill}>
+          <div style={styles.hardGrayPill}>
             <strong style={styles.fs18}>LAST STAGE</strong>
           </div>
           <div
@@ -98,6 +113,15 @@ const styles = {
     color: "#FFF",
 
     background: "#36A878",
+  },
+  hardGrayPill: {
+    flex: 1,
+    padding: 15,
+    textAlign: "center",
+    borderRadius: "50px 0px 0px 50px",
+    color: "#FFF",
+
+    background: "#545454",
   },
 
   roundTitle: {
