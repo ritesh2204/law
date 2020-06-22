@@ -14,12 +14,6 @@ const CaseDiaryListItem = () => {
             High Court
           </p>
         </div>
-        {/* <div className="d-column " style={{ flex: 6 }}>
-          <h2 className="green mb">Ashna Chandrakar</h2>
-          <p className="lightgreen">
-            rajat jain vs state of chhattisgarh bilaspur (281929)
-          </p>
-        </div> */}
         <div className="d-column mt-5 " style={{ flex: 6 }}>
           <div className="mr">
             <p className="lightgreen f-24 mb-0">
@@ -44,7 +38,9 @@ const CaseDiaryListItem = () => {
 
         <div style={{ ...styles.pillDarkGreen, display: "flex" }}>
           <div style={styles.lightGreenPill}>
-            <strong style={styles.fs18}>CURRENT STAGE</strong>
+            <strong style={styles.fs18} className="whiteSpace">
+              CURRENT STAGE
+            </strong>
           </div>
           <div
             className="ml-10"
@@ -64,7 +60,9 @@ const CaseDiaryListItem = () => {
 
         <div style={{ ...styles.pillDarkGreen, display: "flex" }}>
           <div style={styles.hardGrayPill}>
-            <strong style={styles.fs18}>LAST STAGE</strong>
+            <strong style={styles.fs18} className="whiteSpace">
+              LAST STAGE
+            </strong>
           </div>
           <div
             className="ml-10"
@@ -100,10 +98,10 @@ const styles = {
     display: "flex",
   },
   fs18: {
-    fontSize: 18,
+    fontSize: 16,
   },
   fs16: {
-    fontSize: 18,
+    fontSize: 16,
   },
   lightGreenPill: {
     flex: 1,

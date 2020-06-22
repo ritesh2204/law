@@ -4,12 +4,17 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import DashboardLayouts from "./layouts/DashboardLayouts";
 import DashboardPage from "./pages/DashboardPage";
 import UserDetailPage from "./pages/UserDetailPage";
-import AddUserPage from "./pages/AddUserPage";
+import AddAdvocatePage from "./pages/AddAdvocatePage";
 import AddClientPage from "./pages/AddClientPage";
 import ViewCasePages from "./pages/ViewCasePages";
 import AddCasePage from "./pages/AddCasePage";
 import ViewClientPage from "./pages/ViewClientPage";
 import ViewAdvocatePage from "./pages/ViewAdvocatePage";
+import AdvocateUpdatePage from "./pages/AdvocateUpdatePage";
+import ClientUpdatePage from "./pages/ClientUpdatePage";
+import ViewBillPage from "./pages/ViewBillPage";
+import CreateBillPage from "./pages/CreateBillPage";
+import EditBillPage from "./pages/EditBillPage";
 
 const Dashboard = () => (
   <DashboardLayouts>
@@ -34,9 +39,9 @@ const clients = () => (
   </DashboardLayouts>
 );
 
-const adduser = () => (
+const addadvocate = () => (
   <DashboardLayouts>
-    <AddUserPage />
+    <AddAdvocatePage />
   </DashboardLayouts>
 );
 
@@ -57,6 +62,37 @@ const addcase = () => (
     <AddCasePage />
   </DashboardLayouts>
 );
+
+const updateadvocateform = () => (
+  <DashboardLayouts>
+    <AdvocateUpdatePage />
+  </DashboardLayouts>
+);
+
+const updateclientform = () => (
+  <DashboardLayouts>
+    <ClientUpdatePage />
+  </DashboardLayouts>
+);
+
+const viewbill = () => (
+  <DashboardLayouts>
+    <ViewBillPage />
+  </DashboardLayouts>
+);
+
+const createbill = () => (
+  <DashboardLayouts>
+    <CreateBillPage />
+  </DashboardLayouts>
+);
+
+const editbill = () => (
+  <DashboardLayouts>
+    <EditBillPage />
+  </DashboardLayouts>
+);
+
 export default function App() {
   return (
     <div className="App">
@@ -65,11 +101,15 @@ export default function App() {
         <Route exact path="/users" component={User} />
         <Route exact path="/addclients" component={addclient} />
         <Route exact path="/clients" component={clients} />
-        <Route exact path="/adduser" component={adduser} />
+        <Route exact path="/addadvocate" component={addadvocate} />
         <Route exact path="/viewcase" component={viewcase} />
         <Route exact path="/addcase" component={addcase} />
-
-        <Route exact path="/advocates" component={viewadvocates} />
+        <Route exact path="/viewadvocate" component={viewadvocates} />
+        <Route exact path="/updateadvocate" component={updateadvocateform} />
+        <Route exact path="/updateclient" component={updateclientform} />
+        <Route exact path="/viewbill" component={viewbill} />
+        <Route exact path="/createbill" component={createbill} />
+        <Route exact path="/editbill" component={editbill} />
       </Router>
     </div>
   );

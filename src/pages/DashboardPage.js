@@ -48,7 +48,7 @@ const Styles = {
   pcr1: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
   },
   pcr1c1: {
     display: "flex",

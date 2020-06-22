@@ -1,6 +1,5 @@
 import React from "react";
 import UserDetailBlock from "../components/UserDetailBlock";
-import { Container } from "semantic-ui-react";
 import AddButton from "../components/AddButton";
 
 const UserDetailPage = () => (

@@ -17,12 +17,12 @@ class CalendarWidget extends React.Component {
         <div className="flex-container">
           <Calendar date={new Date()} onChange={this.handleSelect} />
         </div>
-        <div style={styles.panelContainer}>
+        {/* <div style={styles.panelContainer}>
           <TrackBox />
           <TrackBox />
           <TrackBox />
           <TrackBox />
-        </div>
+        </div> */}
       </div>
     );
   }
@@ -33,7 +33,7 @@ export default CalendarWidget;
 const styles = {
   calendarDate: {
     textAlign: "left",
-    margin: "10px 0 0 10px",
+    margin: "20px 0 0 10px",
     fontSize: "1.5rem",
   },
   panelContainer: {

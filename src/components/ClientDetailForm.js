@@ -7,6 +7,7 @@ import {
   TextArea,
   Icon,
 } from "semantic-ui-react";
+import { withRouter } from "react-router-dom";
 
 const options = [
   { key: "m", text: "Male", value: "male" },
@@ -14,10 +15,14 @@ const options = [
   { key: "o", text: "Other", value: "other" },
 ];
 
-const ClientDetailForm = () => (
+const ClientDetailForm = (props) => (
   <React.Fragment>
     <div className="p-30">
-      <h2>Create user form</h2>
+      <h2>
+        {props.location.pathname === "/updateclient"
+          ? "Update Client"
+          : "Add Client"}
+      </h2>
       <div className="bordermin"></div>
 
       <br />
@@ -65,11 +70,11 @@ const ClientDetailForm = () => (
           <TextArea size="large" placeholder="Enter Address" />
         </Form.Field>
         <div className="flex-container justify-content-center ">
-          <Button className="graybg textwhite" size="big">
-            Reset
+          <Button className="graybg textwhite letterspace" size="big">
+            RESET
           </Button>
-          <Button className="greenbg textwhite" size="big">
-            Submit &nbsp;
+          <Button className="greenbg textwhite letterspace" size="big">
+            SUBMIT &nbsp;
             <Icon name="arrow right" />
           </Button>
         </div>
@@ -78,4 +83,4 @@ const ClientDetailForm = () => (
   </React.Fragment>
 );
 
-export default ClientDetailForm;
+export default withRouter(ClientDetailForm);

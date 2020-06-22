@@ -1,12 +1,10 @@
 import React from "react";
 import ClientDetailForm from "../components/ClientDetailForm";
 
-const AddClientPage = () => (
+const ClientUpdatePage = () => (
   <React.Fragment>
-    <div>
-      <ClientDetailForm />
-    </div>
+    <ClientDetailForm />
   </React.Fragment>
 );
 
-export default AddClientPage;
+export default ClientUpdatePage;

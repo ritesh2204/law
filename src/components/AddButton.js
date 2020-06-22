@@ -1,6 +1,6 @@
 import React from "react";
+import { Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import { Button } from "semantic-ui-react";
 
 const AddButton = (props) => (
   <React.Fragment>
@@ -9,19 +9,24 @@ const AddButton = (props) => (
       style={styles.containerPadding}
     >
       <div>
-        <h2 className=" mb-0">{props.name}</h2>
+        <h2
+
+        // style={{ borderBottom: "2px solid blue" }}
+        >
+          {props.name}
+        </h2>
+        <div className="borderminblue"></div>
       </div>
 
       <div>
-        <Button
-          content="Add"
-          primary
-          size="small"
-          as={Link}
-          to={props.path}
-          icon="add circle"
-          labelPosition="left"
-        />
+        <Link to={props.path}>
+          <Icon
+            circular
+            style={{ color: "#fff", background: "#2d6465" }}
+            size="large"
+            name="add circle"
+          />
+        </Link>
       </div>
     </div>
   </React.Fragment>

@@ -5,7 +5,6 @@ import {
   Input,
   Dropdown,
   TextArea,
-  Radio,
   Icon,
 } from "semantic-ui-react";
 
@@ -21,11 +20,11 @@ class AddCaseForm extends React.Component {
     this.state = {};
   }
   render() {
-    const { value } = this.state;
+    // const { value } = this.state;
     return (
       <React.Fragment>
         <div className="p-30">
-          <h2 className="fontsize-40">Add Case</h2>
+          <h2>Add Case</h2>
           <div className="bordermin"></div>
 
           <br />
@@ -176,11 +175,11 @@ class AddCaseForm extends React.Component {
             </Form.Group>
 
             <div className="flex-container justify-content-center ">
-              <Button className="graybg textwhite" size="big">
-                Reset
+              <Button className="graybg textwhite letterspace" size="big">
+                RESET
               </Button>
-              <Button className="greenbg textwhite" size="big">
-                Submit &nbsp;
+              <Button className="greenbg textwhite letterspace" size="big">
+                SUBMIT &nbsp;
                 <Icon name="arrow right" />
               </Button>
             </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Form, Input, Dropdown, Icon } from "semantic-ui-react";
+import { withRouter } from "react-router-dom";
 
 const options = [
   { key: "m", text: "Male", value: "male" },
@@ -7,10 +8,14 @@ const options = [
   { key: "o", text: "Other", value: "other" },
 ];
 
-const UserProfileForm = () => (
+const AddAdvocateForm = (props) => (
   <React.Fragment>
     <div className="p-30">
-      <h2>Add Advocates</h2>
+      <h2>
+        {props.location.pathname === "/updateadvocate"
+          ? "Update Advocate"
+          : "Add Advocate"}
+      </h2>
       <div className="bordermin"></div>
 
       <br />
@@ -34,7 +39,7 @@ const UserProfileForm = () => (
           </Form.Field>
 
           <Form.Field>
-            <label>Designation</label>
+            <label>Type</label>
             <Dropdown
               placeholder="Select Designation"
               fluid
@@ -51,7 +56,7 @@ const UserProfileForm = () => (
             RESET
           </Button>
           <Button className="greenbg textwhite letterspace" size="big">
-            CONTINUE &nbsp;
+            ADD &nbsp;
             <Icon name="arrow right" />
           </Button>
         </div>
@@ -60,4 +65,4 @@ const UserProfileForm = () => (
   </React.Fragment>
 );
 
-export default UserProfileForm;
+export default withRouter(AddAdvocateForm);
