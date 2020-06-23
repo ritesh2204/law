@@ -33,22 +33,6 @@ class Sidebar extends Component {
             <h4> MENU</h4>
             <li>
               <Icon
-                name="user outline"
-                className={
-                  location.pathname === "/clients" ? "textGreen" : "iconGray"
-                }
-              />
-              <Link
-                to="/clients"
-                className={
-                  location.pathname === "/clients" ? "textGreen" : null
-                }
-              >
-                Clients
-              </Link>
-            </li>
-            <li>
-              <Icon
                 name="suitcase"
                 className={
                   location.pathname === "/viewcase" ? "textGreen" : "iconGray"
@@ -79,6 +63,22 @@ class Sidebar extends Component {
                 }
               >
                 Advocates
+              </Link>
+            </li>
+            <li>
+              <Icon
+                name="user outline"
+                className={
+                  location.pathname === "/clients" ? "textGreen" : "iconGray"
+                }
+              />
+              <Link
+                to="/clients"
+                className={
+                  location.pathname === "/clients" ? "textGreen" : null
+                }
+              >
+                Clients
               </Link>
             </li>
             <li>
