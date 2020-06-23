@@ -7,7 +7,11 @@ const Navbar = () => (
     <Menu
       fixed="top"
       className="navshadow"
-      style={{ padding: "5px 0px 5px 0px" }}
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
     >
       <Menu.Item style={navStyle.logo}>
         <Link to="/">Thakuar & Thakuar</Link>
@@ -54,7 +58,7 @@ const navStyle = {
   },
   search: {
     width: "66.6%",
-    borderRadius: "50px",
+    height: "80%",
     color: "gray",
   },
 };

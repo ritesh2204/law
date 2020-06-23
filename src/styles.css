@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  /* font-family: "Roboto", sans-serif !important; */
+  font-family: "Asap", sans-serif;
 }
 
 .align-items-center {
@@ -505,7 +505,9 @@ a {
 .greenbg {
   background: #56bc7a !important;
 }
-
+.mr-8 {
+  margin-right: 8px;
+}
 .textwhite {
   color: #fff !important;
 }
@@ -691,4 +693,78 @@ a {
 }
 .text-orange {
   color: #c25002;
+}
+.header_clients {
+  font-family: "Asap", sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  /* letter-spacing: 0.1rem; */
+  color: #242850;
+}
+
+.header_clients1 {
+  font-family: "Mallanna", sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  /* letter-spacing: 0.1rem; */
+  color: #242850;
+}
+.header_clients2 {
+  font-family: "Biryani", sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  letter-spacing: -0.1rem;
+  margin: 24px 0px 18px 24px !important;
+  color: #242850;
+}
+
+.table_margin_clients {
+  color: #242850;
+
+  margin: 0px 24px 0px 24px;
+}
+
+.table_body_clients {
+  color: #242850;
+  font-family: "Biryani", sans-serif;
+  font-weight: inherit;
+  margin: 0px 24px 0px 24px;
+}
+
+.table_header_clients {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Biryani", sans-serif;
+}
+
+hr {
+  background-color: #f3f3f7;
+  /* border: none; */
+}
+
+.ui.divider:not(.vertical):not(.horizontal) {
+  border-top: 2px solid rgba(157, 162, 166, 0.15) !important;
+}
+.mr-20 {
+  margin-right: 23px !important;
+}
+.action_icon_clients {
+  display: flex !important;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.avatar_client {
+  width: 35px;
+  height: 35px;
+  color: #fff;
+
+  border-radius: 5px;
+  background: #ef7036;
 }
