@@ -229,9 +229,19 @@ li {
   width: 50px;
 }
 
+.brown {
+  color: #5e3001;
+}
+
 .justify-content-center {
   justify-content: center !important;
   align-items: center;
+}
+.pill {
+  background: #1d9b9d;
+  padding: 0.4rem;
+  border-radius: 50px;
+  color: #fff;
 }
 
 .flex-container {
@@ -352,6 +362,9 @@ a {
 .mt-100 {
   margin-top: 100px !important;
 }
+.ml-20 {
+  margin-left: 20px;
+}
 
 .ml-10 {
   margin-left: 10px;
@@ -364,6 +377,9 @@ a {
   border-left: 1px solid #278789;
 }
 
+.b-right {
+  border-right: 1px solid #278789;
+}
 .mr {
   margin-left: 10px !important;
 }
@@ -429,9 +445,12 @@ a {
 }
 
 .bordermin {
-  border: 1.5px solid blue;
+  border: 2px solid blue;
   background: blue;
   width: 5%;
+}
+.ml-32 {
+  margin-left: 32px;
 }
 
 .borderminblue {
@@ -582,5 +601,32 @@ a {
 .iconGray {
   color: #b2b2b2;
 }
+.darkgray {
+  color: #545454 !important;
+}
+.lightgray {
+  color: #6a6a6a;
+}
 
+.font-weight-bold {
+  font-weight: bold;
+}
 /* calendar widget */
+.black {
+  color: #000;
+}
+.white {
+  color: #fff;
+}
+
+.lg {
+  background: #dee2e2;
+}
+
+.darkcyan {
+  background: #1d9b9d;
+}
+
+.lastbg {
+  background: #7b7d7d;
+}

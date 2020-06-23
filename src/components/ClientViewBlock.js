@@ -16,11 +16,15 @@ const ClientViewBlock = (props) => {
     labelAddress,
     labelType,
     labelPassword,
+    bgcolor,
   } = props;
   return (
     <React.Fragment>
       <div style={{ marginTop: 20 }}>
-        <div className="panel flex-container ">
+        <div
+          className="panel flex-container "
+          style={{ background: bgcolor ? "#F3FEF8" : "#F1F8DD" }}
+        >
           <div className="panel-head d-column " style={styles.iconCenter}>
             <Image src="/images/court.png" circular className="img-70" />
           </div>
@@ -37,12 +41,6 @@ const ClientViewBlock = (props) => {
                   >
                     {" "}
                     {name} &nbsp;
-                    <Icon
-                      name="edit"
-                      className="editIcon"
-                      circular
-                      size=" small"
-                    />
                   </Link>
                 </b>
               </p>

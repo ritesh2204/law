@@ -23,6 +23,7 @@ const ClientDetailForm = (props) => (
           ? "Update Client"
           : "Add Client"}
       </h2>
+
       <div className="bordermin"></div>
 
       <br />

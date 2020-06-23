@@ -19,7 +19,12 @@ class Sidebar extends Component {
                   style={{ borderBottom: "2px solid blue", paddingBottom: 2 }}
                   alt="dahboardlogo"
                 />
-                <b className="ml-10">Dashboard</b>
+                <Link
+                  to="/"
+                  className={location.pathname === "/" ? "textGreen" : null}
+                >
+                  <b className="ml-10">Dashboard</b>
+                </Link>
               </h3>
             </li>
           </ul>

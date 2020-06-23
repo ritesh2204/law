@@ -15,7 +15,11 @@ class CalendarWidget extends React.Component {
           <b>January 21</b>, <span style={{ color: "gray" }}>Tuesday</span>
         </div>
         <div className="flex-container">
-          <Calendar date={new Date()} onChange={this.handleSelect} />
+          <Calendar
+            date={new Date()}
+            color="#2D6465"
+            onChange={this.handleSelect}
+          />
         </div>
         {/* <div style={styles.panelContainer}>
           <TrackBox />

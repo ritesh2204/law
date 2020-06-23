@@ -1,5 +1,6 @@
 import React from "react";
 import { Image, Icon } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 const CaseViewPanel = () => (
   <React.Fragment>
@@ -17,8 +18,9 @@ const CaseViewPanel = () => (
         <div className="d-column mt-5 " style={{ flex: 6 }}>
           <div className="mr">
             <p className="lightgreen f-24 mb-0">
-              <b className="bold-green">Ashna Chandrakar</b> &nbsp;
-              <Icon name="edit" className="editIcon" circular size=" small" />
+              <Link to="/updatecase">
+                <b className="bold-green">Ashna Chandrakar</b> &nbsp;
+              </Link>
             </p>
             <p className="mb-0 lightgreen f-24">
               rajat jain vs state of chhattisgarh bilaspur (281929)

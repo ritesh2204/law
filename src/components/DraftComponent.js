@@ -1,5 +1,6 @@
 import React from "react";
 import { Image, Icon } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 const DraftComponent = () => (
   <React.Fragment>
@@ -17,14 +18,9 @@ const DraftComponent = () => (
         <div className="d-column mt-5 " style={{ flex: 6 }}>
           <div className="mr">
             <p className="lightgreen f-24 mb-0">
-              <b className="text-bold-gray">Ashna Chandrakar</b>
-              &nbsp;
-              <Icon
-                name="edit"
-                className="editIconGray"
-                circular
-                size=" small"
-              />
+              <Link to="/updatecase">
+                <b className="text-bold-gray">Ashna Chandrakar</b> &nbsp;
+              </Link>
             </p>
             <p className="mb-0 text-light-gray f-24">
               rajat jain vs state of chhattisgarh bilaspur (281929)

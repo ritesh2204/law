@@ -7,6 +7,7 @@ const UserDetailPage = () => (
     <div className="mt-24">
       <AddButton name="Clients" path="/addclients" />
       <ClientViewBlock
+        bgcolor={true}
         name="Ashna Chandrakar"
         email="ashna.chandraker@gmail.com"
         mobile="+91-8844554455"

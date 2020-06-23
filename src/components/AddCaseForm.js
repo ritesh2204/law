@@ -26,7 +26,6 @@ class AddCaseForm extends React.Component {
         <div className="p-30">
           <h2>Add Case</h2>
           <div className="bordermin"></div>
-
           <br />
           <Form unstackable>
             <Form.Group widths="equal">
