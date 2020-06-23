@@ -14,16 +14,23 @@ class Sidebar extends Component {
           <ul>
             <li>
               <h3 style={{ display: "flex" }}>
-                <img
+                {/* <img
                   src="/images/dash.png"
                   style={{ borderBottom: "2px solid blue", paddingBottom: 2 }}
                   alt="dahboardlogo"
+                /> */}
+                <Icon
+                  name="dashboard"
+                  color="blue"
+                  className={
+                    location.pathname === "/" ? "textGreen" : "iconGray"
+                  }
                 />
                 <Link
                   to="/"
                   className={location.pathname === "/" ? "textGreen" : null}
                 >
-                  <b className="ml-10">Dashboard</b>
+                  <b>Dashboard</b>
                 </Link>
               </h3>
             </li>
@@ -34,6 +41,7 @@ class Sidebar extends Component {
             <li>
               <Icon
                 name="suitcase"
+                size={location.pathname === "/viewcase" ? "large" : ""}
                 className={
                   location.pathname === "/viewcase" ? "textGreen" : "iconGray"
                 }
@@ -49,6 +57,7 @@ class Sidebar extends Component {
             </li>
             <li>
               <Icon
+                size={location.pathname === "/viewadvocate" ? "large" : ""}
                 name="law"
                 className={
                   location.pathname === "/viewadvocate"
@@ -67,6 +76,7 @@ class Sidebar extends Component {
             </li>
             <li>
               <Icon
+                size={location.pathname === "/clients" ? "large" : ""}
                 name="user outline"
                 className={
                   location.pathname === "/clients" ? "textGreen" : "iconGray"
@@ -83,6 +93,7 @@ class Sidebar extends Component {
             </li>
             <li>
               <Icon
+                size={location.pathname === "/viewbill" ? "large" : ""}
                 name="money bill alternate"
                 className={
                   location.pathname === "/viewbill" ? "textGreen" : "iconGray"
@@ -99,6 +110,7 @@ class Sidebar extends Component {
             </li>
             <li>
               <Icon
+                size={location.pathname === "/" ? "large" : ""}
                 name="power"
                 className={location.pathname === "/" ? "textGreen" : "iconGray"}
               />
