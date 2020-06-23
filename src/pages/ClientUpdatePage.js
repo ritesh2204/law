@@ -62,7 +62,12 @@ class ClientUpdatePage extends React.Component {
               <h2 className="mb-2">Update Client</h2>
             </div>
             <div>
-              <button onClick={this.handleEditable}>Edit</button>
+              <Icon
+                name="edit outline"
+                size="large"
+                onClick={this.handleEditable}
+                style={{ cursor: "pointer" }}
+              />
             </div>
           </div>
 
@@ -178,15 +183,18 @@ class ClientUpdatePage extends React.Component {
                 <p style={{ fontSize: 24 }}>{this.state.address}</p>
               )}
             </Form.Field>
-            <div className="flex-container justify-content-center ">
-              <Button className="graybg textwhite letterspace" size="big">
-                RESET
-              </Button>
-              <Button className="greenbg textwhite letterspace" size="big">
-                SUBMIT &nbsp;
-                <Icon name="arrow right" />
-              </Button>
-            </div>
+
+            {isEditable ? (
+              <div className="flex-container justify-content-center ">
+                {/* <Button className="graybg textwhite letterspace" size="big">
+              RESET
+            </Button> */}
+                <Button className="greenbg textwhite letterspace" size="big">
+                  UPDATE &nbsp;
+                  <Icon name="arrow right" />
+                </Button>
+              </div>
+            ) : null}
           </Form>
         </div>
       </React.Fragment>

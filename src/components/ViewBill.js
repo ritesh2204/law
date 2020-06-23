@@ -37,8 +37,14 @@ const ViewBill = () => (
         <div className="b-left"></div>
         <div className="d-column mt-5 " style={{ flex: 2 }}>
           <div className="mr">
-            <p className="lightgreen f-24 mb-8">Rs.885688</p>
-            <p className="mb-0 lightgreen f-24">11 jun,2020</p>
+            <p className="lightgreen f-24 mb-8">
+              <Icon name="inr" />
+              885688
+            </p>
+            <p className="mb-0 lightgreen f-24">
+              <Icon name="calendar alternate outline" />
+              11 jun,2020
+            </p>
           </div>
         </div>
       </div>
