@@ -108,7 +108,7 @@ const CaseDiaryListItem = ({ past }) => {
               ...styles.fs16,
               flex: 6,
               padding: 15,
-              color: "#371B00",
+              color: "#371B00         ",
               marginLeft: 0,
               // background: "#7B7D7D",
               borderRadius: "0px 50px 50px 0px",
