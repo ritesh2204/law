@@ -10,7 +10,6 @@ body {
 
 .sidenav {
   height: 100vh;
-
   min-width: 250px;
   z-index: 1;
   top: 50px;
@@ -19,6 +18,9 @@ body {
   overflow-x: hidden;
 
   border-right: 1px solid #e3e3e3;
+}
+.mt-30 {
+  margin-top: 30px;
 }
 
 .sidenav a {
@@ -239,9 +241,33 @@ li {
 }
 .pill {
   background: #1d9b9d;
-  padding: 0.4rem;
+  padding: 1px 6px;
   border-radius: 50px;
   color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.ongoingpill {
+  background: #41a878;
+  padding: 7px;
+  margin-left: 5px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.draftpill {
+  background: #6a6a6a;
+  padding: 7px;
+  margin-left: 5px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .flex-container {
@@ -376,6 +402,9 @@ a {
 .b-left {
   border-left: 1px solid #278789;
 }
+.b-left-blue {
+  border-left: 1px solid #73c2fb;
+}
 
 .b-right {
   border-right: 1px solid #278789;
@@ -414,10 +443,16 @@ a {
 .f-24 {
   font-size: 24px;
 }
+.f-16 {
+  font-size: 1.6rem;
+}
 .red {
   color: red;
 }
 
+.flex-end {
+  justify-content: flex-end;
+}
 .ui.form .field > label {
   color: #787979 !important;
   font-weight: bold !important;
@@ -445,7 +480,7 @@ a {
 }
 
 .bordermin {
-  border: 2px solid blue;
+  border: 3px solid blue;
   background: blue;
   width: 5%;
 }
@@ -454,7 +489,7 @@ a {
 }
 
 .borderminblue {
-  border: 1.5px solid blue;
+  border: 2px solid blue;
   background: blue;
   width: 40%;
 }
@@ -464,7 +499,9 @@ a {
     visibility: hidden !important;
   }
 }
-
+.mr-1 {
+  margin-right: 5px;
+}
 .greenbg {
   background: #56bc7a !important;
 }
@@ -504,6 +541,9 @@ a {
   transform: rotate(-90deg);
   font-weight: bold;
   margin-right: 2px;
+}
+.text-light-orange {
+  color: #dd7027;
 }
 
 .draft-text {
@@ -629,4 +669,26 @@ a {
 
 .lastbg {
   background: #7b7d7d;
+}
+
+.idtext {
+  font-size: 1.2rem;
+}
+
+.pillid {
+  background: #1d9b9d;
+  padding: 2px 6px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.text-info {
+  color: #238dd8 !important;
+}
+.browntext {
+  color: #7c3c21;
+}
+.text-orange {
+  color: #c25002;
 }

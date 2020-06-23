@@ -39,11 +39,16 @@ class UpdateAdvocatePage extends Component {
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <div>
               {" "}
-              <h2>Update Advocate</h2>
+              <h2>Update Users</h2>
               <div className="bordermin"></div>
             </div>
             <div>
-              <button onClick={this.handleEditable}>Edit</button>
+              <Icon
+                name="edit outline"
+                size="large"
+                onClick={this.handleEditable}
+                style={{ cursor: "pointer" }}
+              />
             </div>
           </div>
           <Form.Group widths="equal">
@@ -116,15 +121,18 @@ class UpdateAdvocatePage extends Component {
           </Form.Group>
           <br />
           <br />
-          <div className="flex-container justify-content-center font-poppins ">
-            <Button className="graybg textwhite letterspace " size="big">
-              RESET
-            </Button>
-            <Button className="greenbg textwhite letterspace" size="big">
-              ADD &nbsp;
-              <Icon name="arrow right" />
-            </Button>
-          </div>
+
+          {isEditable ? (
+            <div className="flex-container justify-content-center font-poppins ">
+              {/* <Button className="graybg textwhite letterspace " size="big">
+                RESET
+              </Button> */}
+              <Button className="greenbg textwhite letterspace" size="big">
+                Update &nbsp;
+                <Icon name="arrow right" />
+              </Button>
+            </div>
+          ) : null}
         </Form>
       </div>
     );

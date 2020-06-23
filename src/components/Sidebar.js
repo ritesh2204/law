@@ -71,7 +71,7 @@ class Sidebar extends Component {
                   location.pathname === "/viewadvocate" ? "textGreen" : null
                 }
               >
-                Advocates
+                Users
               </Link>
             </li>
             <li>

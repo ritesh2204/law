@@ -18,12 +18,12 @@ const DraftComponent = () => (
         <div className="d-column mt-5 " style={{ flex: 6 }}>
           <div className="mr">
             <p className="lightgreen f-24 mb-0">
-              <Link to="/updatecase">
-                <b className="text-bold-gray">Ashna Chandrakar</b> &nbsp;
-              </Link>
+              <b className="text-bold-gray">Ashna Chandrakar</b> &nbsp;
             </p>
             <p className="mb-0 text-light-gray f-24">
-              rajat jain vs state of chhattisgarh bilaspur (281929)
+              <Link to="/updatecase">
+                rajat jain vs state of chhattisgarh bilaspur (281929)
+              </Link>
             </p>
           </div>
         </div>

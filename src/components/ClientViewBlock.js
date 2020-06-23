@@ -10,28 +10,30 @@ const ClientViewBlock = (props) => {
     email,
     mobile,
     Address,
-    password,
     type,
     labelMobile,
     labelAddress,
     labelType,
     labelPassword,
-    bgcolor,
+    bgcolorblue,
   } = props;
   return (
     <React.Fragment>
       <div style={{ marginTop: 20 }}>
         <div
           className="panel flex-container "
-          style={{ background: bgcolor ? "#F3FEF8" : "#F1F8DD" }}
+          style={{
+            background: bgcolorblue ? "#ECF6FE" : "#F1F8DD",
+            border: "1px solid #238DD8",
+          }}
         >
-          <div className="panel-head d-column " style={styles.iconCenter}>
+          {/* <div className="panel-head d-column " style={styles.iconCenter}>
             <Image src="/images/court.png" circular className="img-70" />
-          </div>
-          <div className="d-column mt-5 " style={{ flex: 2 }}>
-            <div className="mr">
-              <p className="lightgreen f-24 mb-0">
-                <b className="bold-green">
+          </div> */}
+          <div className="d-column " style={{ flex: 2 }}>
+            <div className="ml-20">
+              <p className=" f-24 mb-0 ">
+                <b className="text-info">
                   <Link
                     to={
                       props.location.pathname === "/viewadvocate"
@@ -40,32 +42,29 @@ const ClientViewBlock = (props) => {
                     }
                   >
                     {" "}
-                    {name} &nbsp;
+                    <Icon name="user circle" style={{ fontSize: 21 }} /> {name}{" "}
+                    &nbsp;
                   </Link>
                 </b>
               </p>
-              <p className="mb-0 lightgreen f-24">{email}</p>
+              <p className="mb-0 text-info f-16">
+                <Icon name="mobile alternate" size="small" />
+                {mobile}
+              </p>
             </div>
           </div>
 
-          <div className="b-left"></div>
-          <div className="d-column mt-5 " style={{ flex: 2 }}>
-            <div className="mr">
-              <p className="lightgreen f-24 mb-8">
-                <b className="bold-green">
-                  {labelMobile}
-                  {labelPassword}:
-                </b>
-                {mobile}
-                {password}
+          <div className="b-left-blue"></div>
+          <div className="d-column" style={{ flex: 2 }}>
+            <div className="ml-20">
+              <p className="text-info f-24 mb-0">
+                <Icon name="mail" size="small" />
+                {email}
               </p>
-              <p className="mb-0 lightgreen f-24">
-                <b className="bold-green ">
-                  {labelAddress}
-                  {labelType}:
-                </b>{" "}
+              <p className="mb-0 text-info f-16">
+                <Icon name="map marker alternate" size="small" />
+
                 {Address}
-                {type}
               </p>
             </div>
           </div>

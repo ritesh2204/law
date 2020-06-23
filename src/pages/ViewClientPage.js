@@ -5,15 +5,15 @@ import ClientViewBlock from "../components/ClientViewBlock";
 const UserDetailPage = () => (
   <React.Fragment>
     <div className="mt-24">
-      <AddButton name="Clients" path="/addclients" />
+      <AddButton name="Clients" bg="#228dd8" path="/addclients" />
       <ClientViewBlock
-        bgcolor={true}
-        name="Ashna Chandrakar"
-        email="ashna.chandraker@gmail.com"
+        bgcolorblue={true}
+        name="Sanjay Mahajan"
+        email="sanjaymahajan90@gmail.com"
         mobile="+91-8844554455"
         labelMobile="MOBILE"
         labelAddress="ADDRESS"
-        Address="Raipur (C.G)"
+        Address="Mungeli, Raipur (C.G)"
       />
     </div>
   </React.Fragment>
