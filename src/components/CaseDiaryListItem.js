@@ -48,7 +48,7 @@ class CaseDiaryListItem extends Component {
               className="panel-head d-column pt-0 pb-0"
               style={styles.iconCenter}
             >
-              <div className="pillid">#28192</div>
+              <div className="pillid mb-8">#28192</div>
               <Image
                 src={past ? "/images/courtgray.png" : "/images/court.png"}
                 circular
@@ -72,7 +72,7 @@ class CaseDiaryListItem extends Component {
               <div className="mr">
                 <div className="f-24 mb-2 flex-container">
                   <div className="flex-1">
-                    <b className={past ? "darkgray" : "darkbrown"}>
+                    <div className={past ? "darkgray" : "darkbrown"}>
                       {" "}
                       <Link to="/updatecase">
                         Rajat jain vs State of chhattisgarh bilaspur
@@ -80,7 +80,7 @@ class CaseDiaryListItem extends Component {
                       <span className={past ? "draftpill" : "ongoingpill"}>
                         {past ? "Draft" : "On Going"}
                       </span>
-                    </b>
+                    </div>
                   </div>
                   <div className="mr flex-end">
                     <div className="flex-container flex-nowarp">
@@ -90,17 +90,13 @@ class CaseDiaryListItem extends Component {
                   </div>
                 </div>
 
-                <div
-                  className={
-                    past ? "lightgray f-16 mb-0" : "bold-green f-16 mb-0"
-                  }
-                >
+                <div className={past ? "lightgray f-16 " : "bold-green f-16"}>
                   <i> Ashna Chandrakar</i>
                 </div>
 
                 <div style={{ ...styles.pillDarkGreen, display: "flex" }}>
                   <div style={styles.lightGreenPillPast}>
-                    <strong className="whitespace case_diary_date ">
+                    <strong className=" whiteSpace case_diary_date ">
                       <Icon name="clock outline" />
                       24 Jun, 2020
                     </strong>
@@ -127,36 +123,26 @@ class CaseDiaryListItem extends Component {
 
                 {isOpen ? (
                   <Fade bottom>
-                    <div
-                      style={{
-                        ...styles.pillDarkGreen,
-                        display: "flex",
-                        // ...stylesAnimate.zoomIn,
-                      }}
-                    >
-                      <div
-                        style={
-                          past ? styles.lightGreenPillPast : styles.hardGrayPill
-                        }
-                      >
-                        <strong
-                          style={styles.fs18}
-                          className={
-                            past ? "brown whiteSpace" : "brown whiteSpace"
-                          }
-                        >
-                          22 Jun, 2020
+                    <div style={{ ...styles.pillDarkGreen, display: "flex" }}>
+                      <div style={styles.lightGreenPillPast}>
+                        <strong className=" whiteSpace case_diary_date ">
+                          <Icon name="clock outline" />
+                          24 Jun, 2020
                         </strong>
                       </div>
                       <div
-                        className="lg black"
+                        className={
+                          past
+                            ? "black ml-10 lg case_diary_date"
+                            : " case_diary_date white ml-10"
+                        }
                         style={{
                           ...styles.fs16,
                           flex: 6,
                           padding: 10,
                           color: "#371B00",
                           marginLeft: 0,
-                          // background: "#7B7D7D",
+                          background: "#DEE2E2",
                           borderRadius: "0px 50px 50px 0px",
                         }}
                       >
@@ -231,7 +217,7 @@ const styles = {
     background: "#e3e3e3",
   },
   hardGrayPill: {
-    flex: 1,
+    flex: 0.7,
     padding: 10,
     textAlign: "center",
     borderRadius: "50px 0px 0px 50px",

@@ -264,7 +264,7 @@ li {
 
 .ongoingpill {
   background: rgb(5, 142, 217);
-  padding: 7px;
+  padding: 0.3rem 0.5rem;
   margin-left: 5px;
   border-radius: 50px;
   color: #fff;
@@ -714,6 +714,24 @@ a {
 .text-info {
   color: #238dd8 !important;
 }
+
+.dashboardBtn {
+  border: 1px solid rgb(5, 142, 217);
+  border-radius: 5px;
+  width: 80%;
+  margin-right: 32;
+  text-align: center;
+  padding: 0.5rem 0.9rem;
+  color: rgb(5, 142, 217);
+}
+.textblue {
+  color: #238dd8;
+}
+.dashboardBtn:hover {
+  background: #238dd8;
+  color: #fff;
+}
+
 .browntext {
   color: #7c3c21;
 }

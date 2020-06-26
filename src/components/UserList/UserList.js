@@ -10,7 +10,7 @@ const UserList = () => {
         <div>
           <h1 className="header_clients2">My Tutors</h1>
         </div>
-        <div className="bill_date_select">
+        <div style={styles.billdateSelect}>
           <Link to="/addadvocate">
             {" "}
             <b> Add</b> &nbsp; <Icon name="add" className="bill_icon_arrow" />
@@ -41,6 +41,16 @@ const UserList = () => {
       <UserlistItem />
     </React.Fragment>
   );
+};
+
+const styles = {
+  billdateSelect: {
+    border: "1.5px solid rgb(5, 142, 217)",
+    borderRadius: 8,
+    marginRight: 32,
+    padding: "0.5rem 0.9rem",
+    color: "rgb(5, 142, 217)",
+  },
 };
 
 export default UserList;

@@ -33,7 +33,7 @@ const CaseDetailListItem = (props) => {
             <div className="d-column mt-5 " style={{ flex: 6 }}>
               <div className="mr">
                 <div className="lightgreen f-24 mb-2 ">
-                  <b className={past ? "darkgray " : "bold-green"}>
+                  <div className={past ? "darkgray " : "bold-green"}>
                     {" "}
                     <Link to="/updatecase">
                       Rajat jain vs state of chhattisgarh bilaspur
@@ -41,7 +41,7 @@ const CaseDetailListItem = (props) => {
                     <span className={past ? "draftpill" : "ongoingpill"}>
                       {past ? "Draft" : "On Going"}
                     </span>
-                  </b>
+                  </div>
                 </div>
                 <div
                   className={

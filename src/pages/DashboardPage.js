@@ -34,7 +34,9 @@ const DashboardPage = () => (
           </div>
         </div>
       </div>
-      <h2 style={Styles.caseDiaryTitle}>Case Diary</h2>
+      <br />
+      <br />
+      <div style={Styles.caseDiaryTitle}>Case Diary</div>
 
       <div className="bordermin"></div>
     </div>
@@ -60,5 +62,6 @@ const Styles = {
   },
   caseDiaryTitle: {
     marginBottom: 4,
+    fontSize: "1.7rem",
   },
 };

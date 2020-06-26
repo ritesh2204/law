@@ -13,43 +13,30 @@ class Sidebar extends Component {
           <br />
           <ul>
             <li>
-              <h3 style={{ display: "flex" }}>
-                {/* <img
-                  src="/images/dash.png"
-                  style={{ borderBottom: "2px solid blue", paddingBottom: 2 }}
-                  alt="dahboardlogo"
-                /> */}
-                <Icon
-                  name="dashboard"
-                  color="blue"
-                  className={
-                    location.pathname === "/" ? "textGreen" : "iconGray"
-                  }
-                />
+              <h2 className="dashboardBtn">
                 <Link
                   to="/"
-                  className={location.pathname === "/" ? "textGreen" : null}
+                  className={location.pathname === "/" ? "textblue" : null}
                 >
                   <b>Dashboard</b>
                 </Link>
-              </h3>
+              </h2>
             </li>
           </ul>
 
           <ul style={{ listStyle: "none" }}>
-            <h4> MENU</h4>
             <li>
               <Icon
                 name="suitcase"
                 size={location.pathname === "/viewcase" ? "large" : ""}
                 className={
-                  location.pathname === "/viewcase" ? "textGreen" : "iconGray"
+                  location.pathname === "/viewcase" ? "textblue" : "iconGray"
                 }
               />
               <Link
                 to="/viewcase"
                 className={
-                  location.pathname === "/viewcase" ? "textGreen" : null
+                  location.pathname === "/viewcase" ? "textblue" : null
                 }
               >
                 Cases
@@ -61,14 +48,14 @@ class Sidebar extends Component {
                 name="law"
                 className={
                   location.pathname === "/viewadvocate"
-                    ? "textGreen"
+                    ? "textblue"
                     : "iconGray"
                 }
               />
               <Link
                 to="/viewadvocate"
                 className={
-                  location.pathname === "/viewadvocate" ? "textGreen" : null
+                  location.pathname === "/viewadvocate" ? "textblue" : null
                 }
               >
                 Users
@@ -79,14 +66,12 @@ class Sidebar extends Component {
                 size={location.pathname === "/clients" ? "large" : ""}
                 name="user outline"
                 className={
-                  location.pathname === "/clients" ? "textGreen" : "iconGray"
+                  location.pathname === "/clients" ? "textblue" : "iconGray"
                 }
               />
               <Link
                 to="/clients"
-                className={
-                  location.pathname === "/clients" ? "textGreen" : null
-                }
+                className={location.pathname === "/clients" ? "textblue" : null}
               >
                 Clients
               </Link>
@@ -96,13 +81,13 @@ class Sidebar extends Component {
                 size={location.pathname === "/viewbill" ? "large" : ""}
                 name="money bill alternate"
                 className={
-                  location.pathname === "/viewbill" ? "textGreen" : "iconGray"
+                  location.pathname === "/viewbill" ? "textblue" : "iconGray"
                 }
               />
               <Link
                 to="/viewbill"
                 className={
-                  location.pathname === "/viewbill" ? "textGreen" : null
+                  location.pathname === "/viewbill" ? "textblue" : null
                 }
               >
                 Bill
@@ -112,7 +97,7 @@ class Sidebar extends Component {
               <Icon
                 size={location.pathname === "#" ? "large" : ""}
                 name="power"
-                className={location.pathname === "#" ? "textGreen" : "iconGray"}
+                className={location.pathname === "#" ? "textblue" : "iconGray"}
               />
               <a href="#">Log out</a>
             </li>
@@ -122,5 +107,17 @@ class Sidebar extends Component {
     );
   }
 }
+
+const styles = {
+  dashboardBtn: {
+    border: "1px solid rgb(5, 142, 217)",
+    borderRadius: 5,
+    width: "80%",
+    marginRight: 32,
+    textAlign: "center",
+    padding: "0.5rem 0.9rem",
+    color: "rgb(5, 142, 217)",
+  },
+};
 
 export default withRouter(Sidebar);
