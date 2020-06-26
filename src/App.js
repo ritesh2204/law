@@ -17,6 +17,7 @@ import CreateBillPage from "./pages/CreateBillPage";
 import EditBillPage from "./pages/EditBillPage";
 import NextHearingPage from "./pages/NextHearingPage";
 import CaseDetailPage from "./pages/CaseDetailPage";
+import ProfilePage from "./pages/ProfilePage";
 
 const Dashboard = () => (
   <DashboardLayouts>
@@ -107,6 +108,12 @@ const casedetailpage = () => (
   </DashboardLayouts>
 );
 
+const profilepage = () => (
+  <DashboardLayouts>
+    <ProfilePage />
+  </DashboardLayouts>
+);
+
 export default function App() {
   return (
     <div className="App">
@@ -126,6 +133,7 @@ export default function App() {
         <Route exact path="/editbill" component={editbill} />
         <Route exact path="/nexthearing" component={nexthearing} />
         <Route exact path="/updatecase" component={casedetailpage} />
+        <Route exact path="/profile" component={profilepage} />
       </Router>
     </div>
   );

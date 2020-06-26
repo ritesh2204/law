@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Asap", sans-serif;
+  /* font-family: "Asap", sans-serif; */
 }
 
 .align-items-center {
@@ -23,6 +23,9 @@ body {
   margin-top: 30px;
 }
 
+.mt-20 {
+  margin-top: 20px;
+}
 .sidenav a {
   text-decoration: none;
   padding-left: 8px;
@@ -32,7 +35,7 @@ body {
 }
 
 .sidenav li {
-  padding-bottom: 8px;
+  padding-bottom: 15px;
 }
 
 /* .sidebarmenu{
@@ -147,7 +150,7 @@ li {
 }
 
 .lightgray {
-  color: #363844 !important;
+  color: gray !important;
 }
 
 .d-flex {
@@ -211,8 +214,9 @@ li {
   margin: 0 auto;
   padding: 5px;
   border-radius: 10px;
-  border: 1px solid #186666;
+  /* border: 1px solid #186666; */
   background: #f1f8f8;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
 .panel-table {
@@ -234,13 +238,23 @@ li {
 .brown {
   color: #5e3001;
 }
-
+.darkbrown {
+  color: #554348;
+}
 .justify-content-center {
   justify-content: center !important;
   align-items: center;
 }
 .pill {
-  background: #1d9b9d;
+  background: #939292;
+  padding: 1px 6px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.category-gray-pill {
+  background: #6a6a6a;
   padding: 1px 6px;
   border-radius: 50px;
   color: #fff;
@@ -249,12 +263,12 @@ li {
 }
 
 .ongoingpill {
-  background: #41a878;
+  background: rgb(5, 142, 217);
   padding: 7px;
   margin-left: 5px;
   border-radius: 50px;
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -274,7 +288,9 @@ li {
   display: flex;
   flex-wrap: wrap;
 }
-
+.pointer {
+  cursor: pointer;
+}
 .img-30 {
   width: 28px;
 }
@@ -293,6 +309,7 @@ li {
   font-size: 14px;
   color: "#2D6465";
   font-weight: bold;
+  padding: 10px;
 }
 
 .space-around {
@@ -341,7 +358,9 @@ tr:nth-child(even) {
   justify-content: center;
   align-items: center;
 }
-
+.flex-nowarp {
+  flex-wrap: nowrap;
+}
 .pb {
   padding-bottom: 15px;
 }
@@ -381,7 +400,9 @@ a {
   font-size: 40px;
   font-weight: bold;
 }
-
+.f-12 {
+  font-size: 1.4rem;
+}
 .mt-5 {
   margin-top: 5px;
 }
@@ -441,13 +462,16 @@ a {
 }
 
 .f-24 {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .f-16 {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 .red {
   color: red;
+}
+.case_diary_date {
+  font-size: 1rem !important;
 }
 
 .flex-end {
@@ -460,9 +484,9 @@ a {
   margin-top: 10px;
 }
 
-.ui.fluid.dropdown {
+/* .ui.fluid.dropdown {
   padding: 14px !important;
-}
+} */
 
 .letterspace {
   letter-spacing: 1px;
@@ -480,8 +504,10 @@ a {
 }
 
 .bordermin {
-  border: 3px solid blue;
-  background: blue;
+  border: 3px solid #058ed9;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  background: #058ed9;
   width: 5%;
 }
 .ml-32 {
@@ -647,7 +673,7 @@ a {
   color: #545454 !important;
 }
 .lightgray {
-  color: #6a6a6a;
+  color: #7e8280;
 }
 
 .font-weight-bold {
@@ -678,10 +704,10 @@ a {
 }
 
 .pillid {
-  background: #1d9b9d;
-  padding: 2px 6px;
+  /* background: #1d9b9d; */
+  padding: 2px 3px;
   border-radius: 50px;
-  color: #fff;
+  color: #2d6465;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -767,4 +793,138 @@ hr {
 
   border-radius: 5px;
   background: #ef7036;
+}
+
+.bill_title {
+  font-size: 1.3rem;
+  margin: 24px 0px 18px 24px !important;
+  font-family: "Barlow", sans-serif;
+
+  color: #595960;
+  letter-spacing: 1px;
+}
+
+.bill_header {
+  font-size: 0.9rem;
+  font-weight: bolder;
+  color: #b3b3b3;
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 1px;
+}
+
+.bill_body {
+  color: #7b7b7d;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: "Barlow", sans-serif;
+  margin: 0px 24px 0px 24px;
+  letter-spacing: 1px;
+}
+.bill_price_color {
+  color: #6bcf83;
+}
+.lineheight {
+  line-height: 1.6;
+}
+.bill_date_select {
+  border: 1.5px solid #e3e3e3;
+  border-radius: 8px;
+  margin-right: 24px;
+  padding: 0.5rem 0.9rem;
+  color: #595960;
+}
+.bill_icon_arrow {
+  color: rgb(5, 142, 217);
+}
+.pt-0 {
+  padding-top: 0px !important;
+}
+.pb-0 {
+  padding-bottom: 0px !important;
+}
+.user_detail_title {
+  font-size: 1.3rem;
+  color: #595960;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif;
+}
+.user_detail_subhead {
+  font-size: 1.1rem;
+  color: #b6b0b0;
+  font-family: "Josefin Sans", sans-serif;
+}
+.user_intrests {
+  color: blue;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif;
+}
+.flex-3 {
+  flex: 3;
+}
+
+.flex-4 {
+  flex: 4;
+}
+.flex-7 {
+  flex: 7;
+}
+.blue_dot {
+  height: 10px;
+  width: 10px;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+}
+.text-right {
+  text-align: right;
+}
+
+@media (max-width: 680px) {
+  .f-24 {
+    font-size: 0.8rem;
+  }
+  .f-16 {
+    font-size: 0.8rem;
+  }
+  .case_diary_date {
+    font-size: 0.8rem;
+  }
+
+  .draftpill {
+    padding: 5px;
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 1500px) {
+  .f-24 {
+    font-size: 1.3rem;
+  }
+
+  .case_diary_date {
+    font-size: 0.8rem !important;
+  }
+
+  .draftpill {
+    padding: 5px;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .f-24 {
+    font-size: 1.3rem;
+  }
+
+  .case_diary_date {
+    font-size: 0.8rem !important;
+  }
+  .ongoingpill {
+    padding: 5px;
+    font-size: 0.6rem;
+  }
+  .draftpill {
+    padding: 5px;
+    font-size: 0.6rem;
+  }
 }

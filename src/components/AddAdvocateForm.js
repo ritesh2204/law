@@ -11,10 +11,10 @@ const options = [
 const AddAdvocateForm = (props) => (
   <React.Fragment>
     <div className="p-30">
-      <h2>
+      <h2 className="mb-2">
         {props.location.pathname === "/updateadvocate"
           ? "Update Advocate"
-          : "Add Advocate"}
+          : "Add User"}
       </h2>
       <div className="bordermin"></div>
 

@@ -1,13 +1,9 @@
 import React from "react";
-import ViewBill from "../components/ViewBill";
-import AddButton from "../components/AddButton";
+import BillDetailList from "../components/BillDetailList/BillDetailList";
 
 const ViewBillPage = () => (
   <React.Fragment>
-    <div className="mt-24">
-      <AddButton name="Bill" path="/createbill" />
-      <ViewBill />
-    </div>
+    <BillDetailList />
   </React.Fragment>
 );
 

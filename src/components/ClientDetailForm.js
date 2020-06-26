@@ -18,7 +18,7 @@ const options = [
 const ClientDetailForm = (props) => (
   <React.Fragment>
     <div className="p-30">
-      <h2>
+      <h2 className="mb-2">
         {props.location.pathname === "/updateclient"
           ? "Update Client"
           : "Add Client"}

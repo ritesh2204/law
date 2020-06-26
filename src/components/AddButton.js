@@ -13,7 +13,6 @@ const AddButton = (props) => {
       >
         <div>
           <h2
-
           // style={{ borderBottom: "2px solid blue" }}
           >
             {props.name}
@@ -27,8 +26,7 @@ const AddButton = (props) => {
               circular
               style={{
                 color: "#fff",
-                background:
-                  location.pathname === "/clients" ? " #228dd8" : "#7C3C21",
+                background: "#186666",
               }}
               size="large"
               name="add circle"

@@ -110,11 +110,11 @@ class Sidebar extends Component {
             </li>
             <li>
               <Icon
-                size={location.pathname === "/" ? "large" : ""}
+                size={location.pathname === "#" ? "large" : ""}
                 name="power"
-                className={location.pathname === "/" ? "textGreen" : "iconGray"}
+                className={location.pathname === "#" ? "textGreen" : "iconGray"}
               />
-              <Link to="/">Log out</Link>
+              <a href="#">Log out</a>
             </li>
           </ul>
         </div>

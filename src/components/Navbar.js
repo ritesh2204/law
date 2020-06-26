@@ -41,7 +41,7 @@ const Navbar = () => (
           />
         </Menu.Item>
 
-        <Menu.Item>
+        <Menu.Item as={Link} to="/profile">
           <span className="grey-text">Elon Musk &nbsp;</span>
         </Menu.Item>
       </Menu.Menu>

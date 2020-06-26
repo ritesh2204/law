@@ -17,7 +17,7 @@ class CalendarWidget extends React.Component {
         <div className="flex-container">
           <Calendar
             date={new Date()}
-            color="#2D6465"
+            color="rgb(5, 142, 217)"
             onChange={this.handleSelect}
           />
         </div>

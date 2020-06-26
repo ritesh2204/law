@@ -1,7 +1,18 @@
 import React, { Component } from "react";
 import { Image, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+// import { zoomIn } from "react-animations";
+// import Radium, { StyleRoot } from "radium";
+import Fade from "react-reveal/Fade";
 
+// const stylesAnimate = {
+//   zoomIn: {
+//     animation: "x 1s",
+//     to: { top: "-200px" },
+//     from: { top: "0px" },
+//     animationName: Radium.keyframes(zoomIn, "zoomIn"),
+//   },
+// };
 class CaseDiaryListItem extends Component {
   constructor(props) {
     super(props);
@@ -19,123 +30,146 @@ class CaseDiaryListItem extends Component {
 
   render() {
     const { isOpen } = this.state;
-    const { past } = this.props;
+    const { past, courtName } = this.props;
     return (
       <div style={styles.panelMargin}>
-        <div
-          className="panel flex-container "
-          style={past ? { background: "#F6F6F6" } : null}
-        >
-          <div className="panel-head d-column " style={styles.iconCenter}>
-            <Image
-              src={past ? "/images/courtgray.png" : "/images/court.png"}
-              circular
-              className="img-70"
-            />
-
-            <p
-              className={past ? "darkgray f-24 mb-0" : "lightgreen f-24 mb-0"}
-              style={{ fontSize: 18, fontWeight: 500 }}
-            >
-              High Court
-            </p>
-          </div>
-          <div className="b-right"></div>
-
-          <div className="d-column mt-5 " style={{ flex: 6 }}>
+        <div className="panel" style={past ? { background: "#F6F6F6" } : null}>
+          {/* <div className="d-column mt-5 " style={{ flex: 2 }}>
             <div className="mr">
-              <p className="lightgreen f-24 mb-2">
-                <b className={past ? "darkgray" : "bold-green"}>
-                  {" "}
-                  <Link to="/updatecase">
-                    rajat jain vs state of chhattisgarh bilaspur (281929)
-                    <span className={past ? "draftpill" : "ongoingpill"}>
-                      {past ? "Draft" : "On Going"}
-                    </span>
-                  </Link>
-                </b>
-              </p>
-              <p
-                className={
-                  past ? "lightgray f-16 mb-0" : "lightgreen f-16 mb-0"
-                }
-              >
-                Ashna Chandrakar
-              </p>
-            </div>
-          </div>
-
-          <div className="d-column mt-5 " style={{ flex: 2 }}>
-            <div className="mr">
-              <div className="flex-container flex-end">
+              <div className="flex-container flex-end flex-nowarp">
                 <div className="pill mr-1">Civil</div>
                 <div className="pill  mr-1">Family</div>
-                <div className="pillid">#28192</div>
               </div>
             </div>
-          </div>
-
-          <div style={{ ...styles.pillDarkGreen, display: "flex" }}>
-            <div style={styles.lightGreenPillPast}>
-              <strong style={styles.fs18} className="whitespace">
-                24 Jun, 2020
-              </strong>
-            </div>
+          </div> */}
+          {/* <div style={{ border: "1px solid red" }}>hello</div> */}
+          <div className="flex-container">
             <div
-              className={past ? "black ml-10 lg" : "white ml-10 darkcyan"}
-              style={{
-                ...styles.fs16,
-                flex: 6,
-                padding: 10,
-                // color: "#FFF",
-                marginLeft: 0,
-                // background: "#1D9B9D",
-                borderRadius: "0px 50px 50px 0px",
-              }}
+              className="panel-head d-column pt-0 pb-0"
+              style={styles.iconCenter}
             >
-              Evedence presentation
+              <div className="pillid">#28192</div>
+              <Image
+                src={past ? "/images/courtgray.png" : "/images/court.png"}
+                circular
+                className="img-50 "
+              />
+
+              <p
+                className={
+                  past
+                    ? "darkgray  mb-0 text-center"
+                    : " text-center lightgreen f mb-0"
+                }
+                style={{ fontSize: "1rem", fontWeight: 500 }}
+              >
+                {courtName}
+              </p>
+            </div>
+            <div className="b-right"></div>
+
+            <div className=" mt-5 " style={{ flex: 6 }}>
+              <div className="mr">
+                <div className="f-24 mb-2 flex-container">
+                  <div className="flex-1">
+                    <b className={past ? "darkgray" : "darkbrown"}>
+                      {" "}
+                      <Link to="/updatecase">
+                        Rajat jain vs State of chhattisgarh bilaspur
+                      </Link>
+                      <span className={past ? "draftpill" : "ongoingpill"}>
+                        {past ? "Draft" : "On Going"}
+                      </span>
+                    </b>
+                  </div>
+                  <div className="mr flex-end">
+                    <div className="flex-container flex-nowarp">
+                      <div className="pill mr-1">Civil</div>
+                      <div className="pill  mr-1">Family</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  className={
+                    past ? "lightgray f-16 mb-0" : "bold-green f-16 mb-0"
+                  }
+                >
+                  <i> Ashna Chandrakar</i>
+                </div>
+
+                <div style={{ ...styles.pillDarkGreen, display: "flex" }}>
+                  <div style={styles.lightGreenPillPast}>
+                    <strong className="whitespace case_diary_date ">
+                      <Icon name="clock outline" />
+                      24 Jun, 2020
+                    </strong>
+                  </div>
+                  <div
+                    className={
+                      past
+                        ? "black ml-10 lg case_diary_date"
+                        : " case_diary_date white ml-10"
+                    }
+                    style={{
+                      ...styles.fs16,
+                      flex: 6,
+                      padding: 10,
+                      color: "#371B00",
+                      marginLeft: 0,
+                      background: "#DEE2E2",
+                      borderRadius: "0px 50px 50px 0px",
+                    }}
+                  >
+                    Evedence presentation
+                  </div>
+                </div>
+
+                {isOpen ? (
+                  <Fade bottom>
+                    <div
+                      style={{
+                        ...styles.pillDarkGreen,
+                        display: "flex",
+                        // ...stylesAnimate.zoomIn,
+                      }}
+                    >
+                      <div
+                        style={
+                          past ? styles.lightGreenPillPast : styles.hardGrayPill
+                        }
+                      >
+                        <strong
+                          style={styles.fs18}
+                          className={
+                            past ? "brown whiteSpace" : "brown whiteSpace"
+                          }
+                        >
+                          22 Jun, 2020
+                        </strong>
+                      </div>
+                      <div
+                        className="lg black"
+                        style={{
+                          ...styles.fs16,
+                          flex: 6,
+                          padding: 10,
+                          color: "#371B00",
+                          marginLeft: 0,
+                          // background: "#7B7D7D",
+                          borderRadius: "0px 50px 50px 0px",
+                        }}
+                      >
+                        Evedence presentation
+                      </div>
+                    </div>
+                  </Fade>
+                ) : null}
+              </div>
             </div>
           </div>
 
-          {isOpen ? (
-            <div style={{ ...styles.pillDarkGreen, display: "flex" }}>
-              <div
-                style={past ? styles.lightGreenPillPast : styles.hardGrayPill}
-              >
-                <strong
-                  style={styles.fs18}
-                  className={past ? "brown whiteSpace" : "brown whiteSpace"}
-                >
-                  22 Jun, 2020
-                </strong>
-              </div>
-              <div
-                className="lg black"
-                style={{
-                  ...styles.fs16,
-                  flex: 6,
-                  padding: 10,
-                  color: "#371B00         ",
-                  marginLeft: 0,
-                  // background: "#7B7D7D",
-                  borderRadius: "0px 50px 50px 0px",
-                }}
-              >
-                Evedence presentation
-              </div>
-            </div>
-          ) : null}
-
-          {/* <div style={{ display: "flex" }}>
-          <div style={{ border: "1px solid red", flex: 1 }}>afkahfka</div>
-          <div style={{ border: "1px solid black", flex: 6 }}>asfasf</div>
-        </div> */}
-          {/* <img
-            src="https://image.flaticon.com/icons/svg/892/892498.svg"
-            style={{ width: 20, margin: "0.5rem auto", cursor: "pointer" }}
-            onClick={this.handleClick}
-          /> */}
-          <div style={{ margin: "0 auto", cursor: "pointer" }}>
+          <div className="flex-container justify-content-center pointer">
             {isOpen ? (
               <Icon name="angle up" size="large" onClick={this.handleClick} />
             ) : (
@@ -157,10 +191,10 @@ const styles = {
     display: "flex",
   },
   fs18: {
-    fontSize: 16,
+    fontSize: 14,
   },
   fs16: {
-    fontSize: 16,
+    fontSize: 14,
   },
 
   darkGrayPill: {
@@ -188,13 +222,13 @@ const styles = {
     background: "#36A878",
   },
   lightGreenPillPast: {
-    flex: 1,
+    flex: 0.7,
     padding: 10,
     textAlign: "center",
     borderRadius: "50px 0px 0px 50px",
-    color: "#FFF",
-
-    background: "#36A878",
+    color: "#000",
+    // border: "1px solid #038ED9",
+    background: "#e3e3e3",
   },
   hardGrayPill: {
     flex: 1,
@@ -213,7 +247,7 @@ const styles = {
 
   iconCenter: {
     display: "flex",
-    flex: 1,
+    width: "10rem",
     justifyContent: "center",
     alignItems: "center",
   },

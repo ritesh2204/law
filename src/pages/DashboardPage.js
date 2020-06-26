@@ -17,7 +17,9 @@ const DashboardPage = () => (
             style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}
           >
             <div style={{ fontSize: "1.3rem", marginLeft: 16 }}>Hello,</div>
-            <div style={{ fontSize: "2rem", marginLeft: 16 }}>Elon Musk</div>
+            <div style={{ fontSize: "2rem", marginLeft: 16, color: "#058ED9" }}>
+              Elon Musk
+            </div>
           </div>
         </div>
 
@@ -32,12 +34,14 @@ const DashboardPage = () => (
           </div>
         </div>
       </div>
-      <h2>Case Diary</h2>
+      <h2 style={Styles.caseDiaryTitle}>Case Diary</h2>
 
       <div className="bordermin"></div>
     </div>
 
-    <CaseDiaryListItem />
+    <CaseDiaryListItem courtName="High Court" />
+    <CaseDiaryListItem courtName="Session Court" />
+    <CaseDiaryListItem courtName="Megistrate Court" />
   </React.Fragment>
 );
 
@@ -53,5 +57,8 @@ const Styles = {
   pcr1c1: {
     display: "flex",
     alignItems: "center",
+  },
+  caseDiaryTitle: {
+    marginBottom: 4,
   },
 };

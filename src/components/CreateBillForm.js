@@ -30,7 +30,7 @@ class CreateBillForm extends React.Component {
         <div style={{ padding: "0px 100px" }}>
           <Form>
             <br />
-            <h2>Create Bill</h2>
+            <h2 className="mb-2">Create Bill</h2>
             <div className="bordermin"></div>
 
             <br />
