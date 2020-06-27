@@ -6,7 +6,6 @@ import UserList from "../components/UserList/UserList";
 
 const ViewAdvocatePage = () => (
   <React.Fragment>
-    {/* <AddButton name="Users" path="/addadvocate" /> */}
     <UserList />
   </React.Fragment>
 );

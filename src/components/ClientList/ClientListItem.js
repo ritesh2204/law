@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon, Image } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 const ClientListItem = () => {
   return (
@@ -13,20 +14,23 @@ const ClientListItem = () => {
           />
         </div>
         <div className="flex-7">
-          <div className="user_detail_title mb-2">Music Soundsation 2020</div>
+          <div className="user_detail_title mb-2">
+            <Link to="/updateclient">Rajat Jain</Link>
+          </div>
           <div className="user_detail_subhead">
             <Icon name="map marker alternate" />
-            &nbsp;Jiexpo kemayoran, Jakarta
+            &nbsp;Mungeli, Raipur (Chhattisgarh)
           </div>
         </div>
         <div className="flex-2 text-right">
           <div className="user_intrests mb-2">
             {" "}
-            <span className="blue_dot"></span> &nbsp;Music
+            {/* <span className="blue_dot"></span> */}
+            &nbsp;+91-884455555
           </div>
           <div className="user_detail_subhead">
-            <Icon name="clock outline" />
-            &nbsp;08 Am - 12 Pm
+            <Icon name="mail outline" />
+            &nbsp;rajatjain@gmail.com
           </div>
         </div>
       </div>

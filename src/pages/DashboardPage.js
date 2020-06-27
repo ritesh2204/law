@@ -38,7 +38,7 @@ const DashboardPage = () => (
       <br />
       <div style={Styles.caseDiaryTitle}>Case Diary</div>
 
-      <div className="bordermin"></div>
+      <div className="bordermin mt-10"></div>
     </div>
 
     <CaseDiaryListItem courtName="High Court" />

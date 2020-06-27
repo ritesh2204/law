@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon, Divider } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 const UserlistItem = () => {
   return (
@@ -7,19 +8,25 @@ const UserlistItem = () => {
       <div className="d-flex table_body_clients align-items-center ">
         <div className="flex-1 flex-container align-items-center">
           <div className="avatar_client mr-8 flex-container align-items-center justify-content-center">
-            MG
+            PK
           </div>
-          <b>Mario Gibbs</b>
+          <b>Pankaj Kumar</b>
         </div>
         <div className="flex-1">
-          <b>Art</b>
+          <b>pankajkumar@gmail.com</b>
         </div>
         <div className="flex-1">
-          <b>14 silver Road</b>
+          ******* <Icon name="eye slash outline" className="pointer" />
+        </div>
+        <div className="flex-1">
+          <b>Admin</b>&nbsp;
         </div>
         <div className="action_icon_clients flex-1">
           <div>
-            <Icon name="edit" className="mr-20" />
+            <Link to="/user_update">
+              {" "}
+              <Icon name="edit" className="mr-20" />
+            </Link>
             <Icon name="user delete" />
           </div>{" "}
         </div>

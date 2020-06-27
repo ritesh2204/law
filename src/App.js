@@ -10,7 +10,6 @@ import ViewCasePages from "./pages/ViewCasePages";
 import AddCasePage from "./pages/AddCasePage";
 import ViewClientPage from "./pages/ViewClientPage";
 import ViewAdvocatePage from "./pages/ViewAdvocatePage";
-import AdvocateUpdatePage from "./pages/AdvocateUpdatePage";
 import ClientUpdatePage from "./pages/ClientUpdatePage";
 import ViewBillPage from "./pages/ViewBillPage";
 import CreateBillPage from "./pages/CreateBillPage";
@@ -18,6 +17,7 @@ import EditBillPage from "./pages/EditBillPage";
 import NextHearingPage from "./pages/NextHearingPage";
 import CaseDetailPage from "./pages/CaseDetailPage";
 import ProfilePage from "./pages/ProfilePage";
+import UpdateAdvocatePage from "./pages/UpdateAdvocatePage";
 
 const Dashboard = () => (
   <DashboardLayouts>
@@ -68,7 +68,7 @@ const addcase = () => (
 
 const updateadvocateform = () => (
   <DashboardLayouts>
-    <AdvocateUpdatePage />
+    <UpdateAdvocatePage />
   </DashboardLayouts>
 );
 
@@ -126,7 +126,7 @@ export default function App() {
         <Route exact path="/viewcase" component={viewcase} />
         <Route exact path="/addcase" component={addcase} />
         <Route exact path="/viewadvocate" component={viewadvocates} />
-        <Route exact path="/updateadvocate" component={updateadvocateform} />
+        <Route exact path="/user_update" component={updateadvocateform} />
         <Route exact path="/updateclient" component={updateclientform} />
         <Route exact path="/viewbill" component={viewbill} />
         <Route exact path="/createbill" component={createbill} />

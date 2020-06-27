@@ -2,31 +2,24 @@ import React from "react";
 import UserlistItem from "./UserListItem";
 import { Divider, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import AddButton from "../AddButton/AddButton";
 
 const UserList = () => {
   return (
     <React.Fragment>
-      <div className="d-flex space-between align-items-center">
-        <div>
-          <h1 className="header_clients2">My Tutors</h1>
-        </div>
-        <div style={styles.billdateSelect}>
-          <Link to="/addadvocate">
-            {" "}
-            <b> Add</b> &nbsp; <Icon name="add" className="bill_icon_arrow" />
-          </Link>
-        </div>
-      </div>
-      <Divider />
+      <AddButton path="/addadvocate" title="Organization" />
       <div className="d-flex table-header  table_header_clients table_margin_clients">
         <div className="flex-1">
-          <b>Tutor name</b>
+          <b>Name</b>
         </div>
         <div className="flex-1">
-          <b>Subjects</b>
+          <b>Email</b>
         </div>
         <div className="flex-1">
-          <b>Locations</b>
+          <b>Password</b>
+        </div>
+        <div className="flex-1">
+          <b>Type</b>
         </div>
         <div className="flex-1">
           <b>Actions</b>
@@ -41,16 +34,6 @@ const UserList = () => {
       <UserlistItem />
     </React.Fragment>
   );
-};
-
-const styles = {
-  billdateSelect: {
-    border: "1.5px solid rgb(5, 142, 217)",
-    borderRadius: 8,
-    marginRight: 32,
-    padding: "0.5rem 0.9rem",
-    color: "rgb(5, 142, 217)",
-  },
 };
 
 export default UserList;

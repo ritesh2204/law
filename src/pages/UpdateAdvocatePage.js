@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Form, Table, Dropdown, Input, Icon } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 class UpdateAdvocatePage extends Component {
   constructor(props) {
@@ -8,72 +10,134 @@ class UpdateAdvocatePage extends Component {
       email: "rvritesh11@gmail.com",
       password: "234242",
       type: "admin",
-      isEditable: true,
+      isEditable: false,
     };
   }
+
+  handleEditable = () => {
+    this.setState((prevState) => ({
+      isEditable: !prevState.isEditable,
+    }));
+  };
+
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
   render() {
     const { name, email, password, type, isEditable } = this.state;
     return (
-      <div>
-        <Form unstackable>
-          <Form.Group widths="equal">
-            <Form.Field>
-              <label>Name</label>
-              {isEditable ? (
-                <Input
-                  size="large"
-                  name=""
-                  value={name}
-                  onChange={this.handleChange}
-                  placeholder="Enter Name."
-                />
-              ) : (
-                <p style={{ fontSize: 24 }}>{this.state.name}</p>
-              )}
-            </Form.Field>
+      <React.Fragment>
+        <Form>
+          <div style={styles.tableContainer}>
+            <Table celled striped style={styles.tableShadow}>
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell colSpan="5">
+                    Update Users
+                    <Link to="/user_update">
+                      <Icon
+                        name="pencil alternate"
+                        size="large"
+                        onClick={this.handleEditable}
+                        style={{
+                          cursor: "pointer",
+                          float: "right",
+                        }}
+                      />
+                    </Link>
+                  </Table.HeaderCell>
+                </Table.Row>
+              </Table.Header>
 
-            <Form.Field>
-              <label>Email</label>
-              <Input size="large" placeholder="Enter email" />
-            </Form.Field>
-          </Form.Group>
+              <Table.Body>
+                <Table.Row>
+                  <Table.Cell collapsing>Name</Table.Cell>
+                  <Table.Cell colSpan="2">
+                    {isEditable ? (
+                      <Input
+                        size="small"
+                        name="name"
+                        value={name}
+                        fluid
+                        onChange={this.handleChange}
+                        placeholder="Enter Name."
+                      />
+                    ) : (
+                      <span> {name}</span>
+                    )}
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell collapsing>Email</Table.Cell>
+                  <Table.Cell>
+                    {isEditable ? (
+                      <Input
+                        size="small"
+                        name="mobile"
+                        value={email}
+                        fluid
+                        onChange={this.handleChange}
+                        placeholder="Enter Mobile."
+                      />
+                    ) : (
+                      <span>{email}</span>
+                    )}
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell collapsing>Password</Table.Cell>
+                  <Table.Cell>
+                    {isEditable ? (
+                      <Input
+                        size="small"
+                        name="father"
+                        placeholder="Enter Father Name"
+                        value={password}
+                        fluid
+                        onChange={this.handleChange}
+                      />
+                    ) : (
+                      <span>{password}</span>
+                    )}
+                  </Table.Cell>
+                </Table.Row>
 
-          <Form.Group widths="equal">
-            <Form.Field>
-              <label>Password</label>
-              <Input
-                size="large"
-                type="password"
-                placeholder="Enter password"
-              />
-            </Form.Field>
-
-            <Form.Field>
-              <label>Type</label>
-              <Dropdown
-                placeholder="Select Designation"
-                fluid
-                selection
-                options={options}
-                size="large"
-              />
-            </Form.Field>
-          </Form.Group>
-          <br />
-          <br />
-          <div className="flex-container justify-content-center font-poppins ">
-            <Button className="graybg textwhite letterspace " size="big">
-              RESET
-            </Button>
-            <Button className="greenbg textwhite letterspace" size="big">
-              ADD &nbsp;
-              <Icon name="arrow right" />
-            </Button>
+                <Table.Row>
+                  <Table.Cell collapsing>Type</Table.Cell>
+                  <Table.Cell>
+                    {isEditable ? (
+                      <Dropdown
+                        placeholder="Select Designation"
+                        fluid
+                        name="type"
+                        selection
+                        // options={options}
+                        size="large"
+                      />
+                    ) : (
+                      <span>{type}</span>
+                    )}
+                  </Table.Cell>
+                </Table.Row>
+              </Table.Body>
+            </Table>
           </div>
         </Form>
-      </div>
+      </React.Fragment>
     );
   }
 }
+
+const styles = {
+  tableContainer: {
+    padding: "20px 20px 0px 20px",
+    margin: "auto",
+  },
+  tableShadow: {
+    boxShadow: "0 0.5rem 1.5rem rgba(3, 142, 217, 0.14)",
+  },
+};
 
 export default UpdateAdvocatePage;

@@ -35,7 +35,7 @@ body {
 }
 
 .sidenav li {
-  padding-bottom: 15px;
+  padding-bottom: 1.8rem;
 }
 
 /* .sidebarmenu{
@@ -275,11 +275,11 @@ li {
 
 .draftpill {
   background: #6a6a6a;
-  padding: 7px;
+  padding: 0.3rem 0.5rem;
   margin-left: 5px;
   border-radius: 50px;
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -754,9 +754,9 @@ a {
   color: #242850;
 }
 .header_clients2 {
-  font-family: "Biryani", sans-serif;
-  font-weight: 800;
-  font-size: 2.2rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
   letter-spacing: -0.1rem;
   margin: 24px 0px 18px 24px !important;
   color: #242850;
@@ -814,12 +814,10 @@ hr {
 }
 
 .bill_title {
-  font-size: 1.3rem;
+  font-size: 2rem;
   margin: 24px 0px 18px 24px !important;
-  font-family: "Barlow", sans-serif;
-
+  font-family: "Josefin Sans", sans-serif;
   color: #595960;
-  letter-spacing: 1px;
 }
 
 .bill_header {
@@ -845,11 +843,11 @@ hr {
   line-height: 1.6;
 }
 .bill_date_select {
-  border: 1.5px solid #e3e3e3;
+  border: 1.5px solid rgb(5, 142, 217);
   border-radius: 8px;
   margin-right: 24px;
   padding: 0.5rem 0.9rem;
-  color: #595960;
+  color: rgb(5, 142, 217);
 }
 .bill_icon_arrow {
   color: rgb(5, 142, 217);
@@ -945,4 +943,47 @@ hr {
     padding: 5px;
     font-size: 0.6rem;
   }
+}
+
+.ui.table tr td {
+  border-top: none !important;
+}
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.ui.table {
+  border: none !important;
+  color: rgba(86, 85, 85, 0.87) !important;
+  font-family: "Josefin Sans", sans-serif !important;
+}
+
+.ui.table thead th {
+  color: #3898dc !important;
+  font-size: 1.1rem !important;
+  font-weight: 800 !important;
+}
+
+.ui.form .field .ui.input input,
+.ui.form .fields .field .ui.input input {
+  background: #e7ebef !important;
+  border: none !important;
+}
+
+.ui.form input[type="text"] {
+  border-radius: 5px !important;
+}
+
+.ui.selection.dropdown {
+  background: #e7ebef !important;
+  border: none !important;
+}
+
+.ui.form textarea {
+  background: #e7ebef !important;
+  border: none !important;
+}
+
+a:hover {
+  color: #000 !important;
 }

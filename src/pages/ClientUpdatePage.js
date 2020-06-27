@@ -6,8 +6,10 @@ import {
   Dropdown,
   TextArea,
   Icon,
+  Divider,
+  Table,
 } from "semantic-ui-react";
-import { withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const options = [
   { key: "m", text: "Male", value: "male" },
@@ -55,146 +57,151 @@ class ClientUpdatePage extends React.Component {
     } = this.state;
     return (
       <React.Fragment>
-        <div className="p-30">
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <div>
-              {" "}
-              <h2 className="mb-2">Update Client</h2>
-            </div>
-            <div>
-              <Icon
-                name="edit outline"
-                size="large"
-                onClick={this.handleEditable}
-                style={{ cursor: "pointer" }}
-              />
-            </div>
-          </div>
+        <div style={styles.tableContainer}>
+          <Form>
+            <Table celled striped style={styles.tableShadow}>
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell colSpan="5">
+                    Update Clients
+                    <Link to="/updateclient">
+                      <Icon
+                        name="pencil alternate"
+                        size="large"
+                        onClick={this.handleEditable}
+                        style={{
+                          cursor: "pointer",
+                          float: "right",
+                        }}
+                      />
+                    </Link>
+                  </Table.HeaderCell>
+                </Table.Row>
+              </Table.Header>
 
-          <div className="bordermin"></div>
-          <br />
-          <Form unstackable>
-            <Form.Group widths="equal">
-              <Form.Field>
-                <label>Name</label>
+              <Table.Body>
+                <Table.Row>
+                  <Table.Cell collapsing>Name</Table.Cell>
+                  <Table.Cell colSpan="2">
+                    {isEditable ? (
+                      <Input
+                        size="small"
+                        name="name"
+                        value={name}
+                        fluid
+                        onChange={this.handleChange}
+                        placeholder="Enter Name."
+                      />
+                    ) : (
+                      <span> {name}</span>
+                    )}
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell collapsing>Mobile No</Table.Cell>
+                  <Table.Cell>
+                    {isEditable ? (
+                      <Input
+                        size="small"
+                        name="mobile"
+                        value={mobile}
+                        fluid
+                        onChange={this.handleChange}
+                        placeholder="Enter Mobile."
+                      />
+                    ) : (
+                      <span>{mobile}</span>
+                    )}
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell collapsing>Father Name</Table.Cell>
+                  <Table.Cell>
+                    {isEditable ? (
+                      <Input
+                        size="small"
+                        name="father"
+                        placeholder="Enter Father Name"
+                        value={father}
+                        fluid
+                        onChange={this.handleChange}
+                      />
+                    ) : (
+                      <span>{father}</span>
+                    )}
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell collapsing>Email</Table.Cell>
+                  <Table.Cell>
+                    {isEditable ? (
+                      <Input
+                        size="small"
+                        value={email}
+                        fluid
+                        onChange={this.handleChange}
+                        placeholder="Enter your email"
+                      />
+                    ) : (
+                      <span>{email}</span>
+                    )}
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell collapsing>State</Table.Cell>
+                  <Table.Cell>
+                    {isEditable ? (
+                      <Dropdown
+                        placeholder="Select State"
+                        fluid
+                        name="state"
+                        value={state}
+                        onChange={this.handleChange}
+                        selection
+                        options={options}
+                        size="small"
+                      />
+                    ) : (
+                      <span> {state}</span>
+                    )}
+                  </Table.Cell>
+                </Table.Row>
 
-                {isEditable ? (
-                  <Input
-                    size="large"
-                    name="name"
-                    value={name}
-                    onChange={this.handleChange}
-                    placeholder="Enter Name."
-                  />
-                ) : (
-                  <p style={{ fontSize: 24 }}>{this.state.name}</p>
-                )}
-              </Form.Field>
-
-              <Form.Field>
-                <label>Mobile No.</label>
-                {isEditable ? (
-                  <Input
-                    size="large"
-                    name="mobile"
-                    value={mobile}
-                    onChange={this.handleChange}
-                    placeholder="Enter Name."
-                  />
-                ) : (
-                  <p style={{ fontSize: 24 }}>{this.state.mobile}</p>
-                )}
-              </Form.Field>
-
-              <Form.Field>
-                <label>Father Name</label>
-                {isEditable ? (
-                  <Input
-                    size="large"
-                    name="father"
-                    placeholder="Enter Father Name"
-                    value={father}
-                    onChange={this.handleChange}
-                  />
-                ) : (
-                  <p style={{ fontSize: 24 }}>{this.state.father}</p>
-                )}
-              </Form.Field>
-            </Form.Group>
-
-            <Form.Group widths="equal">
-              <Form.Field>
-                <label>Email</label>
-                {isEditable ? (
-                  <Input
-                    size="large"
-                    value={email}
-                    onChange={this.handleChange}
-                    placeholder="Enter your email"
-                  />
-                ) : (
-                  <p style={{ fontSize: 24 }}>{this.state.email}</p>
-                )}
-              </Form.Field>
-              <Form.Field>
-                <label>State</label>
-                {isEditable ? (
-                  <Dropdown
-                    placeholder="Select State"
-                    fluid
-                    name="state"
-                    value={state}
-                    onChange={this.handleChange}
-                    selection
-                    options={options}
-                    size="large"
-                  />
-                ) : (
-                  <p style={{ fontSize: 24 }}>{this.state.state}</p>
-                )}
-              </Form.Field>
-              <Form.Field>
-                <label>City</label>
-
-                {isEditable ? (
-                  <Input
-                    size="large"
-                    name="city"
-                    value={city}
-                    onChange={this.handleChange}
-                    placeholder="Enter City"
-                  />
-                ) : (
-                  <p style={{ fontSize: 24 }}>{this.state.city}</p>
-                )}
-              </Form.Field>
-            </Form.Group>
-
-            <Form.Field>
-              <label>Address</label>
-              {isEditable ? (
-                <TextArea
-                  size="large"
-                  name="address"
-                  onChange={this.handleChange}
-                  placeholder="Enter Address"
-                />
-              ) : (
-                <p style={{ fontSize: 24 }}>{this.state.address}</p>
-              )}
-            </Form.Field>
-
-            {isEditable ? (
-              <div className="flex-container justify-content-center ">
-                {/* <Button className="graybg textwhite letterspace" size="big">
-              RESET
-            </Button> */}
-                <Button className="greenbg textwhite letterspace" size="big">
-                  UPDATE &nbsp;
-                  <Icon name="arrow right" />
-                </Button>
-              </div>
-            ) : null}
+                <Table.Row>
+                  <Table.Cell collapsing>City</Table.Cell>
+                  <Table.Cell>
+                    {isEditable ? (
+                      <Input
+                        size="small"
+                        name="city"
+                        value={city}
+                        fluid
+                        onChange={this.handleChange}
+                        placeholder="Enter City"
+                      />
+                    ) : (
+                      <span>{city}</span>
+                    )}
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell collapsing>Address</Table.Cell>
+                  <Table.Cell>
+                    {isEditable ? (
+                      <TextArea
+                        size="small"
+                        name="address"
+                        onChange={this.handleChange}
+                        colSpan="5"
+                        placeholder="Enter Address"
+                      />
+                    ) : (
+                      <span>{address}</span>
+                    )}
+                  </Table.Cell>
+                </Table.Row>
+              </Table.Body>
+            </Table>
           </Form>
         </div>
       </React.Fragment>
@@ -202,4 +209,13 @@ class ClientUpdatePage extends React.Component {
   }
 }
 
+const styles = {
+  tableContainer: {
+    padding: "10px 20px 0px 20px",
+    margin: "auto",
+  },
+  tableShadow: {
+    boxShadow: "0 0.5rem 1.5rem rgba(3, 142, 217, 0.14)",
+  },
+};
 export default ClientUpdatePage;

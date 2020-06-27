@@ -3,9 +3,7 @@ import ClientDetailForm from "../components/ClientDetailForm";
 
 const Form = () => (
   <React.Fragment>
-    <div>
-      <ClientDetailForm />
-    </div>
+    <ClientDetailForm />
   </React.Fragment>
 );
 
