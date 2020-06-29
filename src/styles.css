@@ -960,9 +960,9 @@ h2 {
 }
 
 .ui.table thead th {
-  color: #3898dc !important;
+  color: #000 !important;
   font-size: 1.1rem !important;
-  font-weight: 800 !important;
+  font-weight: none !important;
 }
 
 .ui.form .field .ui.input input,
