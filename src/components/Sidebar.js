@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Icon, Button } from "semantic-ui-react";
+import { Icon } from "semantic-ui-react";
 import { Link, withRouter } from "react-router-dom";
 
 class Sidebar extends Component {
@@ -17,7 +17,7 @@ class Sidebar extends Component {
           alignItems: "flex-start",
         }}
       >
-        <div style={{ marginTop: "2.5rem", marginBottom: "0.8rem" }}>
+        <div style={{ marginTop: "2.3rem", marginBottom: "0.8rem" }}>
           <Link to="/">
             <Icon name="dashboard" color="blue" style={{ marginLeft: -10 }} />{" "}
             &nbsp;{" "}
@@ -93,24 +93,12 @@ class Sidebar extends Component {
               name="power"
               className={location.pathname === "#" ? "textblue" : "iconGray"}
             />
-            <a href="#">Log out</a>
+            <a href="/logout">Log out</a>
           </li>
         </ul>
       </div>
     );
   }
 }
-
-const styles = {
-  dashboardBtn: {
-    border: "1px solid rgb(5, 142, 217)",
-    borderRadius: 5,
-    width: "80%",
-    marginRight: 32,
-    textAlign: "center",
-    padding: "0.5rem 0.9rem",
-    color: "rgb(5, 142, 217)",
-  },
-};
 
 export default withRouter(Sidebar);

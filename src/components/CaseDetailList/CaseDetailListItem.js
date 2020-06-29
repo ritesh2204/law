@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Icon } from "semantic-ui-react";
+import { Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 const CaseDetailListItem = (props) => {

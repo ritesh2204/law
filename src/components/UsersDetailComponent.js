@@ -1,6 +1,5 @@
 import React from "react";
-import { Image, Icon, Divider } from "semantic-ui-react";
-import { Link } from "react-router-dom";
+import { Icon, Divider } from "semantic-ui-react";
 
 const UserDetailComponent = () => (
   <React.Fragment>

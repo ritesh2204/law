@@ -216,7 +216,7 @@ li {
   border-radius: 10px;
   /* border: 1px solid #186666; */
   background: #f1f8f8;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1.5rem rgba(107, 104, 104, 0.1);
 }
 
 .panel-table {
@@ -950,6 +950,7 @@ hr {
 }
 h2 {
   font-family: "Josefin Sans", sans-serif;
+  font-weight: inherit;
 }
 
 .ui.table {
@@ -986,4 +987,13 @@ h2 {
 
 a:hover {
   color: #000 !important;
+}
+
+.ui.form input[type="text"] {
+  background: #e7ebef !important;
+  border: none !important;
+}
+
+.ui.form input[type="text"] {
+  border-radius: 7px !important;
 }

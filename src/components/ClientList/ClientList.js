@@ -1,7 +1,5 @@
 import React from "react";
 import ClientListItem from "./ClientListItem";
-import { Divider, Icon } from "semantic-ui-react";
-import { Link } from "react-router-dom";
 import AddButton from "../AddButton/AddButton";
 
 const ClientList = () => {

@@ -1,13 +1,12 @@
 import React from "react";
 import {
-  Button,
   Form,
   Input,
   Dropdown,
   TextArea,
   Icon,
-  Divider,
   Table,
+  Button,
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
@@ -202,6 +201,15 @@ class ClientUpdatePage extends React.Component {
                 </Table.Row>
               </Table.Body>
             </Table>
+
+            {isEditable ? (
+              <div className="flex-container justify-content-center ">
+                <Button className="greenbg textwhite letterspace" size="big">
+                  UPDATE &nbsp;
+                  <Icon name="arrow right" />
+                </Button>
+              </div>
+            ) : null}
           </Form>
         </div>
       </React.Fragment>

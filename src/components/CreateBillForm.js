@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Header,
   Form,
   Dropdown,
   Table,
@@ -8,9 +7,6 @@ import {
   Input,
   TextArea,
   Icon,
-  //   Message,
-  //   Dimmer,
-  //   Loader,
 } from "semantic-ui-react";
 
 const options = [

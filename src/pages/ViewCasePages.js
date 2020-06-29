@@ -14,15 +14,4 @@ const ViewCasePages = () => (
   </React.Fragment>
 );
 
-const styles = {
-  caseTitle: {
-    margin: "24px 0px 18px 30px",
-    fontSize: "2rem",
-    fontFamily: "Asap, sans-serif",
-    fontWeight: 600,
-    // borderBottom: "4px solid blue",
-    // borderSpacing: "10px",
-  },
-};
-
 export default ViewCasePages;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ProfileListItem from "./ProfileListItem";
-import { Divider, Icon } from "semantic-ui-react";
+import { Divider } from "semantic-ui-react";
 
 class ProfileList extends Component {
   render() {

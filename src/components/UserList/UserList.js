@@ -1,7 +1,6 @@
 import React from "react";
 import UserlistItem from "./UserListItem";
-import { Divider, Icon } from "semantic-ui-react";
-import { Link } from "react-router-dom";
+import { Divider } from "semantic-ui-react";
 import AddButton from "../AddButton/AddButton";
 
 const UserList = () => {

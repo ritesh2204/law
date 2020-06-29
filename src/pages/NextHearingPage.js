@@ -1,7 +1,7 @@
 import React from "react";
-import { Input, Form, TextArea, Button, Icon } from "semantic-ui-react";
+import { Input, Form, TextArea, Button, Icon, Table } from "semantic-ui-react";
 import CaseDiaryListItem from "../components/CaseDiaryListItem";
-
+import { Link } from "react-router-dom";
 class NextHearingPage extends React.Component {
   state = {
     isEditable: false,
@@ -22,7 +22,7 @@ class NextHearingPage extends React.Component {
     });
   };
   render() {
-    const { isEditable, selectDate, addDocuments, message } = this.state;
+    const { isEditable } = this.state;
     return (
       <div className="ml-32 mt-30">
         <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -42,49 +42,74 @@ class NextHearingPage extends React.Component {
         </div>
         <div className="bordermin"></div>
         <Form>
-          <Form.Group>
-            <Form.Group style={{ display: "flex", flexDirection: "column" }}>
-              <Form.Field>
-                <label>Select Date</label>
-                {isEditable ? (
-                  <Input type="date" value={"2020-06-22"} />
-                ) : (
-                  <p style={{ fontSize: 24, width: 300 }}>
-                    {this.state.selectDate}
-                  </p>
-                )}
-              </Form.Field>
+          <div style={styles.tableContainer}>
+            <Table celled striped style={styles.tableShadow}>
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell colSpan="5">
+                    Update Users
+                    <Link to="/user_update">
+                      <Icon
+                        name="pencil alternate"
+                        size="large"
+                        onClick={this.handleEditable}
+                        style={{
+                          cursor: "pointer",
+                          float: "right",
+                        }}
+                      />
+                    </Link>
+                  </Table.HeaderCell>
+                </Table.Row>
+              </Table.Header>
 
-              <Form.Field>
-                <label>Add Documents</label>
-                {isEditable ? (
-                  <Input type="file" />
-                ) : (
-                  <p style={{ fontSize: 24 }}>{this.state.addDocuments}</p>
-                )}
-              </Form.Field>
-            </Form.Group>
-            <Form.Field width={12}>
-              <label>For</label>
-              {isEditable ? (
-                <TextArea size="large" rows="6" placeholder="Enter Notes" />
-              ) : (
-                <p style={{ fontSize: 24 }}>{this.state.message}</p>
-              )}
-            </Form.Field>
-          </Form.Group>
+              <Table.Body>
+                <Table.Row>
+                  <Table.Cell collapsing>Date</Table.Cell>
+                  <Table.Cell colSpan="2">
+                    {isEditable ? (
+                      <Input type="date" value={"2020-06-22"} />
+                    ) : (
+                      <span>{this.state.selectDate}</span>
+                    )}
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell collapsing>Add Documents</Table.Cell>
+                  <Table.Cell>
+                    {isEditable ? (
+                      <Input type="file" />
+                    ) : (
+                      <span>{this.state.addDocuments}</span>
+                    )}
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell collapsing>For</Table.Cell>
+                  <Table.Cell>
+                    {isEditable ? (
+                      <TextArea
+                        size="large"
+                        rows="6"
+                        placeholder="Enter Notes"
+                      />
+                    ) : (
+                      <span>{this.state.message}</span>
+                    )}
+                  </Table.Cell>
+                </Table.Row>
+              </Table.Body>
+            </Table>
 
-          {isEditable ? (
-            <div className="flex-container justify-content-center ">
-              <Button className="graybg textwhite letterspace" size="big">
-                RESET
-              </Button>
-              <Button className="greenbg textwhite letterspace" size="big">
-                SUBMIT &nbsp;
-                <Icon name="arrow right" />
-              </Button>
-            </div>
-          ) : null}
+            {isEditable ? (
+              <div className="flex-container justify-content-center ">
+                <Button className="greenbg textwhite letterspace" size="big">
+                  UPDATE &nbsp;
+                  <Icon name="arrow right" />
+                </Button>
+              </div>
+            ) : null}
+          </div>
         </Form>
 
         <h2>Previous Hearing</h2>
@@ -98,5 +123,15 @@ class NextHearingPage extends React.Component {
     );
   }
 }
+
+const styles = {
+  tableContainer: {
+    padding: "20px 20px 0px 20px",
+    margin: "auto",
+  },
+  tableShadow: {
+    boxShadow: "0 0.5rem 1.5rem rgba(3, 142, 217, 0.14)",
+  },
+};
 
 export default NextHearingPage;

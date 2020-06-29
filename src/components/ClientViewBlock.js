@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Icon } from "semantic-ui-react";
+import { Icon } from "semantic-ui-react";
 import { Link, withRouter } from "react-router-dom";
 
 const ClientViewBlock = (props) => {
@@ -9,11 +9,7 @@ const ClientViewBlock = (props) => {
     email,
     mobile,
     Address,
-    type,
-    labelMobile,
-    labelAddress,
-    labelType,
-    labelPassword,
+
     bgcolorblue,
   } = props;
   return (

@@ -37,7 +37,6 @@ class AddCaseForm extends React.Component {
                 fluid
                 selection
                 multiple
-                fluid
                 options={options}
               />
             </Form.Field>
@@ -121,7 +120,6 @@ class AddCaseForm extends React.Component {
                   selection
                   multiple
                   options={options}
-                  fluid
                 />
               </Form.Field>
             </Form.Group>

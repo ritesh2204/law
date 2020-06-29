@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Table, Dropdown, Input, Icon } from "semantic-ui-react";
+import { Form, Table, Dropdown, Input, Icon, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 class UpdateAdvocatePage extends Component {
@@ -123,6 +123,15 @@ class UpdateAdvocatePage extends Component {
                 </Table.Row>
               </Table.Body>
             </Table>
+
+            {isEditable ? (
+              <div className="flex-container justify-content-center ">
+                <Button className="greenbg textwhite letterspace" size="big">
+                  UPDATE &nbsp;
+                  <Icon name="arrow right" />
+                </Button>
+              </div>
+            ) : null}
           </div>
         </Form>
       </React.Fragment>

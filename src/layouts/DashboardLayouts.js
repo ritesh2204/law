@@ -6,7 +6,7 @@ import Sidebar from "../components/Sidebar";
 const DashboardLayouts = ({ children }) => (
   <React.Fragment>
     <Navbar />
-    <div style={{ display: "flex", marginTop: 59 }}>
+    <div style={{ display: "flex", marginTop: 55 }}>
       <div style={{ flex: 1 }}>
         <Sidebar />
       </div>

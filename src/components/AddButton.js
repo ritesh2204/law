@@ -4,7 +4,7 @@ import { Link, withRouter } from "react-router-dom";
 
 const AddButton = (props) => {
   console.log(props);
-  const { location } = props;
+
   return (
     <React.Fragment>
       <div
