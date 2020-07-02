@@ -28,30 +28,30 @@ class Sidebar extends Component {
           <li>
             <Icon
               name="suitcase"
-              size={location.pathname === "/viewcase" ? "large" : ""}
+              size={location.pathname === "/cases" ? "large" : ""}
               className={
-                location.pathname === "/viewcase" ? "textblue" : "iconGray"
+                location.pathname === "/cases" ? "textblue" : "iconGray"
               }
             />
             <Link
-              to="/viewcase"
-              className={location.pathname === "/viewcase" ? "textblue" : null}
+              to="/cases"
+              className={location.pathname === "/cases" ? "textblue" : null}
             >
               Cases
             </Link>
           </li>
           <li>
             <Icon
-              size={location.pathname === "/viewadvocate" ? "large" : ""}
+              size={location.pathname === "/organization" ? "large" : ""}
               name="law"
               className={
-                location.pathname === "/viewadvocate" ? "textblue" : "iconGray"
+                location.pathname === "/organization" ? "textblue" : "iconGray"
               }
             />
             <Link
-              to="/viewadvocate"
+              to="/organization"
               className={
-                location.pathname === "/viewadvocate" ? "textblue" : null
+                location.pathname === "/organization" ? "textblue" : null
               }
             >
               Organization
@@ -74,15 +74,15 @@ class Sidebar extends Component {
           </li>
           <li>
             <Icon
-              size={location.pathname === "/viewbill" ? "large" : ""}
+              size={location.pathname === "/bill" ? "large" : ""}
               name="money bill alternate"
               className={
-                location.pathname === "/viewbill" ? "textblue" : "iconGray"
+                location.pathname === "/bill" ? "textblue" : "iconGray"
               }
             />
             <Link
-              to="/viewbill"
-              className={location.pathname === "/viewbill" ? "textblue" : null}
+              to="/bill"
+              className={location.pathname === "/bill" ? "textblue" : null}
             >
               Bill
             </Link>

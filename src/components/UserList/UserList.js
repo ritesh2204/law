@@ -14,14 +14,12 @@ const UserList = () => {
         <div className="flex-1">
           <b>Email</b>
         </div>
-        <div className="flex-1">
-          <b>Password</b>
-        </div>
+
         <div className="flex-1">
           <b>Type</b>
         </div>
         <div className="flex-1">
-          <b>Actions</b>
+          <b>Edit</b>
         </div>
       </div>
       <div className="table_margin_clients">

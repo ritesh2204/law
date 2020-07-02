@@ -15,9 +15,7 @@ const UserlistItem = () => {
         <div className="flex-1">
           <b>pankajkumar@gmail.com</b>
         </div>
-        <div className="flex-1">
-          ******* <Icon name="eye slash outline" className="pointer" />
-        </div>
+
         <div className="flex-1">
           <b>Admin</b>&nbsp;
         </div>
@@ -27,7 +25,7 @@ const UserlistItem = () => {
               {" "}
               <Icon name="edit" className="mr-20" />
             </Link>
-            <Icon name="user delete" />
+            {/* <Icon name="user delete" /> */}
           </div>{" "}
         </div>
       </div>
