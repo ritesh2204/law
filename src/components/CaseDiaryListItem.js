@@ -59,7 +59,7 @@ class CaseDiaryListItem extends Component {
                     <div className="flex-1">
                       <div className={past ? "darkgray" : "darkbrown"}>
                         {" "}
-                        <Link to="/updatecase">
+                        <Link to="/clients/1">
                           Rajat jain vs State of chhattisgarh bilaspur
                         </Link>
                         <span className={past ? "draftpill" : "ongoingpill"}>

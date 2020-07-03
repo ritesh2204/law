@@ -35,7 +35,7 @@ const CaseDetailListItem = (props) => {
                 <div className="lightgreen f-24 mb-2 ">
                   <div className={past ? "darkgray " : "bold-green"}>
                     {" "}
-                    <Link to="/updatecase">
+                    <Link to="/cases/1">
                       Rajat jain vs state of chhattisgarh bilaspur
                     </Link>
                     <span className={past ? "draftpill" : "ongoingpill"}>

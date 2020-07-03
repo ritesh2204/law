@@ -16,7 +16,7 @@ const options = [
   { key: "o", text: "Other", value: "other" },
 ];
 
-class CaseDetail extends React.Component {
+class CaseDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -57,21 +57,7 @@ class CaseDetail extends React.Component {
     });
   };
   render() {
-    const {
-      isEditable,
-      name,
-      client,
-      stage,
-      court,
-      advocates,
-      casetype,
-      praying,
-      courtroom,
-      courtlocation,
-      notes,
-      act,
-      notice,
-    } = this.state;
+    const { isEditable } = this.state;
 
     return (
       <React.Fragment>

@@ -15,7 +15,7 @@ const ClientListItem = () => {
         </div>
         <div className="flex-7">
           <div className="user_detail_title mb-2">
-            <Link to="/updateclient">Rajat Jain</Link>
+            <Link to="/clients/1">Rajat Jain</Link>
           </div>
           <div className="user_detail_subhead">
             <Icon name="map marker alternate" />

@@ -127,12 +127,12 @@ export default function App() {
         <Route exact path="/addcase" component={addcase} />
         <Route exact path="/organization" component={viewadvocates} />
         <Route exact path="/user_update" component={updateadvocateform} />
-        <Route exact path="/updateclient" component={updateclientform} />
+        <Route exact path="/clients/:id" component={updateclientform} />
         <Route exact path="/bill" component={viewbill} />
         <Route exact path="/createbill" component={createbill} />
         <Route exact path="/editbill" component={editbill} />
         <Route exact path="/nexthearing" component={nexthearing} />
-        <Route exact path="/updatecase" component={casedetailpage} />
+        <Route exact path="/cases/:id" component={casedetailpage} />
         <Route exact path="/profile" component={profilepage} />
       </Router>
     </div>
