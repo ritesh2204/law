@@ -10,9 +10,7 @@ const DashboardLayouts = ({ children }) => (
       <div style={{ flexGrow: 1 }}>
         <Sidebar />
       </div>
-
-      {children}
-
+      <div style={{ flexGrow: 30 }}>{children}</div>
       <div style={{ flexGrow: 2 }}>
         <CalendarWidget />
       </div>

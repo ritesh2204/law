@@ -7,17 +7,13 @@ import UserDetailPage from "./pages/UserDetailPage";
 
 const Dashboard = () => (
   <DashboardLayouts>
-    <div style={{ flexGrow: 30 }}>
-      <DashboardPage />
-    </div>
+    <DashboardPage />
   </DashboardLayouts>
 );
 
 const User = () => (
   <DashboardLayouts>
-    <div style={{ flexGrow: 30 }}>
-      <UserDetailPage />
-    </div>
+    <UserDetailPage />
   </DashboardLayouts>
 );
 
@@ -25,6 +21,7 @@ export default function App() {
   return (
     <div className="App">
       <Router>
+        <Route exact path="/" component={Dashboard} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/users" component={User} />
       </Router>
