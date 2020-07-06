@@ -1,10 +1,21 @@
 import React from "react";
 import { Menu, Input, Icon, Image } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => (
   <div>
-    <Menu fixed="top" className="navpadtop navpadbottom navshadow">
-      <Menu.Item style={navStyle.logo}>H-care</Menu.Item>
+    <Menu
+      fixed="top"
+      className="navshadow"
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Menu.Item style={navStyle.logo}>
+        <Link to="/">Thakuar & Thakuar</Link>
+      </Menu.Item>
 
       <Input
         icon="search"
@@ -30,11 +41,8 @@ const Navbar = () => (
           />
         </Menu.Item>
 
-        <Menu.Item>
-          <span className="grey-text">
-            Elon Musk &nbsp;
-            <Icon name="arrow down" />
-          </span>
+        <Menu.Item as={Link} to="/profile">
+          <span className="grey-text">Elon Musk &nbsp;</span>
         </Menu.Item>
       </Menu.Menu>
     </Menu>
@@ -43,14 +51,14 @@ const Navbar = () => (
 
 const navStyle = {
   logo: {
-    paddingLeft: 50,
+    paddingLeft: 32,
     fontWeight: "bold",
     fontSize: 16,
-    marginRight: 150,
+    marginRight: 59,
   },
   search: {
-    width: "60%",
-    borderRadius: "50px",
+    width: "66.6%",
+    height: "80%",
     color: "gray",
   },
 };

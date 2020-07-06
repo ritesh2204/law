@@ -1,40 +1,104 @@
-import React from "react";
-import { Icon, Grid, GridColumn, Image, Container } from "semantic-ui-react";
+import React, { Component } from "react";
+import { Icon } from "semantic-ui-react";
+import { Link, withRouter } from "react-router-dom";
 
-const Sidebar = () => (
-  <div>
-    <div>
-      <div className="sidenav">
-        <div>
-          <p className="heading">Dashboard</p>
-          <p className="subhead">MENU</p>
-          <a href="#about">
-            <Icon name="user outline" />
-            Clients
-          </a>
-          <a href="#services">
-            <Icon name="suitcase" />
-            Cases
-          </a>
-          <a href="#clients">
-            <Icon name="law" />
-            Advocates
-          </a>
-          <a href="#clients">
-            <Icon name="user outline" />
-            Users
-          </a>
-          <br />
-          <p className="subhead">BILL AREA</p>
-          <a href="#contact">
-            <Icon name="money bill alternate" />
-            Bill
-          </a>
+class Sidebar extends Component {
+  render() {
+    console.log(this.props);
+    const { location } = this.props;
+    console.log(location.pathname);
+    return (
+      <div
+        className="sidenav"
+        style={{
+          paddingLeft: 20,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+        }}
+      >
+        <div style={{ marginTop: "2.3rem", marginBottom: "0.8rem" }}>
+          <Link to="/">
+            <Icon name="dashboard" color="blue" style={{ marginLeft: -10 }} />{" "}
+            &nbsp;{" "}
+            <span style={{ fontSize: 18, fontWeight: "bold" }}>Dashboard</span>
+          </Link>
         </div>
+        <ul style={{ listStyle: "none", paddingLeft: 0 }}>
+          <li>
+            <Icon
+              name="suitcase"
+              size={location.pathname === "/cases" ? "large" : ""}
+              className={
+                location.pathname === "/cases" ? "textblue" : "iconGray"
+              }
+            />
+            <Link
+              to="/cases"
+              className={location.pathname === "/cases" ? "textblue" : null}
+            >
+              Cases
+            </Link>
+          </li>
+          <li>
+            <Icon
+              size={location.pathname === "/organization" ? "large" : ""}
+              name="law"
+              className={
+                location.pathname === "/organization" ? "textblue" : "iconGray"
+              }
+            />
+            <Link
+              to="/organization"
+              className={
+                location.pathname === "/organization" ? "textblue" : null
+              }
+            >
+              Organization
+            </Link>
+          </li>
+          <li>
+            <Icon
+              size={location.pathname === "/clients" ? "large" : ""}
+              name="user outline"
+              className={
+                location.pathname === "/clients" ? "textblue" : "iconGray"
+              }
+            />
+            <Link
+              to="/clients"
+              className={location.pathname === "/clients" ? "textblue" : null}
+            >
+              Clients
+            </Link>
+          </li>
+          <li>
+            <Icon
+              size={location.pathname === "/bill" ? "large" : ""}
+              name="money bill alternate"
+              className={
+                location.pathname === "/bill" ? "textblue" : "iconGray"
+              }
+            />
+            <Link
+              to="/bill"
+              className={location.pathname === "/bill" ? "textblue" : null}
+            >
+              Bill
+            </Link>
+          </li>
+          <li>
+            <Icon
+              size={location.pathname === "#" ? "large" : ""}
+              name="power"
+              className={location.pathname === "#" ? "textblue" : "iconGray"}
+            />
+            <a href="/logout">Log out</a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <div></div>
-  </div>
-);
+    );
+  }
+}
 
-export default Sidebar;
+export default withRouter(Sidebar);
