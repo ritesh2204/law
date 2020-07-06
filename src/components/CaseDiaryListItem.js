@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Image, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 
 class CaseDiaryListItem extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class CaseDiaryListItem extends Component {
     const { isOpen } = this.state;
     const { past, courtName } = this.props;
     return (
-      <Fade bottom cascade>
+      <Zoom cascade>
         <div style={styles.panelMargin}>
           <div
             className="panel"
@@ -153,7 +154,7 @@ class CaseDiaryListItem extends Component {
             </div>
           </div>
         </div>
-      </Fade>
+      </Zoom>
     );
   }
 }
